@@ -1,13 +1,12 @@
-MenuLateralSlide
+﻿Proyecto III 
 ================
 
-menu lateral personalizado
-Buen día amigos. 
-Toda la información la pueden encontrar en 
-http://cursoandroidstudio.blogspot.com.ar/
+Universidad Latina de Costa Rica
+Proyecto de Ing.Software
+Aplicacion Android - FC-Sport
 
-dale me gusta
-https://www.facebook.com/CursoAndroidStudio?fref=ts
-
-mi canal
-https://www.youtube.com/watch?v=hJ6QE7BODU0&list=PL5fwvmezw2ccKVR_PD0ThZXYU0dThR0qB&index=1
+Estudiantes
+	>Luis Solano
+	>Kenneth Aguilar
+	>Ermis Luna
+	>Sebastian Rey
