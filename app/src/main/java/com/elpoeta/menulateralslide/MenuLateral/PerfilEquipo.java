@@ -1,25 +1,64 @@
 package com.elpoeta.menulateralslide.MenuLateral;
 
-import android.app.Fragment;
+import android.app.Activity;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
-import com.elpoeta.menulateralslide.R;
+import com.elpoeta.menulateralslide.PerfilEquipoTaps.Datos;
+import com.elpoeta.menulateralslide.PerfilEquipoTaps.Favoritos;
+import com.elpoeta.menulateralslide.PerfilEquipoTaps.Miembros;
 
-/**
- * Created by user on 26/08/2014.
- */
-public class PerfilEquipo extends Fragment {
+public class PerfilEquipo extends ActionBarActivity {
 
-@Override
-public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        //setContentView(R.layout.activity_my);  //se saca porque sino se solapan
 
-    View rootView = inflater.inflate(R.layout.fm_perfilequipo, container, false);
+        ActionBar actionBar = getSupportActionBar();
 
-    return rootView;
+        /**INDICAR TITULO Y SUBTITULO**/
+        actionBar.setTitle("Perfil de equipo");
 
-}
+
+        /**MODO TABS EN ACTIONBAR**/
+        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+        /**CREAR TABS**/
+        ActionBar.Tab tab = actionBar.newTab().setText("Datos").setTabListener(new TabsListener(this, "datos", Datos.class));
+        actionBar.addTab(tab);
+
+        tab = actionBar.newTab().setText("Miembros").setTabListener(new TabsListener(this, "Miembros", Miembros.class));
+        actionBar.addTab(tab);
+
+        tab = actionBar.newTab().setText("Favoritos").setTabListener(new TabsListener(this, "Favoritos", Favoritos.class));
+        actionBar.addTab(tab);
+
+
+    }
+
+    public class TabsListener  implements ActionBar.TabListener {
+
+        private Fragment fragment;
+        private final String tag;
+
+        public TabsListener(Activity activity, String tag, Class cls) {
+            this.tag = tag;
+            fragment = Fragment.instantiate(activity, cls.getName());
+        }
+
+        public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+            ft.replace(android.R.id.content, fragment, tag);
+        }
+
+        public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
+            ft.remove(fragment);
+        }
+
+        public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {}
+    }
 
 }

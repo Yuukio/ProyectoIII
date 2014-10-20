@@ -3,6 +3,7 @@ package com.elpoeta.menulateralslide;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -161,12 +162,16 @@ public class MyActivity extends Activity {
     private void displayView(int position) {
         // update the main content by replacing fragments
         Fragment fragment = null;
+        PerfilEquipo equipo = new PerfilEquipo();
+
         switch (position) {
             case 0:
                 fragment = new PaginaPrincipal();
                 break;
             case 1:
-                fragment = new PerfilEquipo();
+                Intent abrir = new Intent(this, PerfilEquipo.class);
+                equipo.startActivity(abrir);
+
                 break;
             case 2:
                 fragment = new Disponibilidad();
@@ -225,5 +230,7 @@ public class MyActivity extends Activity {
         // Pass any configuration change to the drawer toggls
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
+
+
 
 }

@@ -17,7 +17,7 @@ public class Disponibilidad extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fm_disponibilidad, container, false);
+        View rootView = inflater.inflate(R.layout.fm_ml_disponibilidad, container, false);
 
         return rootView;
     }

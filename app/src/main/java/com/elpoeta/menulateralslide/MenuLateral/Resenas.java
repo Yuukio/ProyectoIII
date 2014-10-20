@@ -11,13 +11,14 @@ import com.elpoeta.menulateralslide.R;
 /**
  * Created by Luis on 19/10/14.
  */
+
 public class Resenas extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fm_resenas, container, false);
+        View rootView = inflater.inflate(R.layout.fm_ml_resenas, container, false);
 
         return rootView;
     }
