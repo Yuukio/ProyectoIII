@@ -1,4 +1,4 @@
-package com.elpoeta.menulateralslide;
+package com.elpoeta.menulateralslide.MenuPersonalizado;
 
 public class NavDrawerItem {
 	

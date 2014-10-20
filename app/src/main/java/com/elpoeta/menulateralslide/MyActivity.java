@@ -22,6 +22,8 @@ import com.elpoeta.menulateralslide.MenuLateral.Historial;
 import com.elpoeta.menulateralslide.MenuLateral.PaginaPrincipal;
 import com.elpoeta.menulateralslide.MenuLateral.PerfilEquipo;
 import com.elpoeta.menulateralslide.MenuLateral.Resenas;
+import com.elpoeta.menulateralslide.MenuPersonalizado.NavDrawerItem;
+import com.elpoeta.menulateralslide.MenuPersonalizado.NavDrawerListAdapter;
 
 import java.util.ArrayList;
 
@@ -218,18 +220,19 @@ public class MyActivity extends Activity {
     //Diplaying fragment view for selected nav drawer list item
 
     private void displayView(int position) {
+
+    //private void onItemClick(AdapterView adapterView, View view, int position, long l){
+
         // update the main content by replacing fragments
         Fragment fragment = null;
-        PerfilEquipo equipo = new PerfilEquipo();
 
         switch (position) {
             case 0:
                 fragment = new PaginaPrincipal();
                 break;
             case 1:
-                Intent abrir = new Intent(this, PerfilEquipo.class);
-                equipo.startActivity(abrir);
-
+                Intent intent = new Intent(getApplicationContext(), PerfilEquipo.class);
+                startActivity(intent);
                 break;
             case 2:
                 fragment = new Disponibilidad();
