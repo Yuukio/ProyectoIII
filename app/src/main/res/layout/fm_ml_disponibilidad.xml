@@ -4,4 +4,19 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pantalla Disponibilidad"
+        android:id="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:textColor="#ffffffff"
+        android:background="#ff235934"
+        android:clickable="true"
+        android:autoText="false" />
 </LinearLayout>

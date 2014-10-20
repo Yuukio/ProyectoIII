@@ -27,6 +27,66 @@ import java.util.ArrayList;
 
 
 public class MyActivity extends Activity {
+
+    /****************************/
+    //Solo los taps, sin el menu lateral
+    /*
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            //setContentView(R.layout.activity_my);  //se saca porque sino se solapan
+
+            ActionBar actionBar = getSupportActionBar();
+
+            //INDICAR TITULO Y SUBTITULO
+            actionBar.setTitle("Perfil de equipo");
+
+
+            //MODO TABS EN ACTIONBAR
+            actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+
+            //CREAR TABS
+            ActionBar.Tab tab = actionBar.newTab().setText("Datos").setTabListener(new TabsListener(this, "datos", Datos.class));
+            actionBar.addTab(tab);
+
+            tab = actionBar.newTab().setText("Miembros").setTabListener(new TabsListener(this, "Miembros", Miembros.class));
+            actionBar.addTab(tab);
+
+            tab = actionBar.newTab().setText("Favoritos").setTabListener(new TabsListener(this, "Favoritos", Favoritos.class));
+            actionBar.addTab(tab);
+
+
+        }
+
+        public class TabsListener  implements ActionBar.TabListener {
+
+            private Fragment fragment;
+            private final String tag;
+
+            public TabsListener(Activity activity, String tag, Class cls) {
+                this.tag = tag;
+                fragment = Fragment.instantiate(activity, cls.getName());
+            }
+
+            public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+                ft.replace(android.R.id.content, fragment, tag);
+            }
+
+            public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
+                ft.remove(fragment);
+            }
+
+            public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {}
+        }
+
+    }
+*/
+
+/*****************************************************/
+
+//Menu lateral sin taps, hay que conectarlos
+
+
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -66,12 +126,11 @@ public class MyActivity extends Activity {
         // agregar un nuevo item al menu deslizante
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1), true, "Estrenos"));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[6], navMenuIcons.getResourceId(6, -1)));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[7], navMenuIcons.getResourceId(7, -1)));
 
         // Recycle the typed array
         navMenuIcons.recycle();
@@ -112,11 +171,10 @@ public class MyActivity extends Activity {
         }
     }
 
-    /**
-     * Slide menu item click listener
-     * */
-    private class SlideMenuClickListener implements
-            ListView.OnItemClickListener {
+
+     //Slide menu item click listener
+
+    private class SlideMenuClickListener implements ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position,long id) {
             // display view for selected nav drawer item
@@ -145,9 +203,9 @@ public class MyActivity extends Activity {
         }
     }
 
-    /* *
-     * Called when invalidateOptionsMenu() is triggered
-     */
+
+     //Called when invalidateOptionsMenu() is triggered
+
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         // if nav drawer is opened, hide the action items
@@ -156,9 +214,9 @@ public class MyActivity extends Activity {
         return super.onPrepareOptionsMenu(menu);
     }
 
-    /**
-     * Diplaying fragment view for selected nav drawer list item
-     * */
+
+    //Diplaying fragment view for selected nav drawer list item
+
     private void displayView(int position) {
         // update the main content by replacing fragments
         Fragment fragment = null;
@@ -192,8 +250,7 @@ public class MyActivity extends Activity {
 
         if (fragment != null) {
             FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction()
-                    .replace(R.id.frame_container, fragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.frame_container, fragment).commit();
 
             // update selected item and title, then close the drawer
             mDrawerList.setItemChecked(position, true);
@@ -212,10 +269,10 @@ public class MyActivity extends Activity {
         getActionBar().setTitle(mTitle);
     }
 
-    /**
-     * When using the ActionBarDrawerToggle, you must call it during
-     * onPostCreate() and onConfigurationChanged()...
-     */
+
+     //When using the ActionBarDrawerToggle, you must call it during
+     //onPostCreate() and onConfigurationChanged()...
+
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {

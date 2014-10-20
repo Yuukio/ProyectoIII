@@ -15,20 +15,18 @@
         <item >Calendario</item>
         <item >Historial</item>
         <item >Reseñas</item>
-        <item></item>
         <item >Cerrar sesion</item>
     </string-array>
 
     <!-- Iconos de los items -->
     <array name="nav_drawer_icons">
-        <item>@drawable/ic_communities</item>
-        <item>@drawable/ic_whats_hot</item>
-        <item>@drawable/ic_people</item>
-        <item>@drawable/ic_photos</item>
-        <item>@drawable/ic_communities</item>
-        <item>@drawable/ic_whats_hot</item>
-        <item></item>
-        <item>@drawable/ic_people</item>
+        <item>@drawable/principal</item>
+        <item>@drawable/perfil</item>
+        <item>@drawable/disponible</item>
+        <item>@drawable/calendarios</item>
+        <item>@drawable/historial</item>
+        <item>@drawable/resenas</item>
+        <item>@drawable/cerrar</item>
     </array>
 
     <!-- Content Description -->
