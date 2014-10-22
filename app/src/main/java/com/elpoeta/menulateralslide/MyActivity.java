@@ -235,7 +235,8 @@ public class MyActivity extends Activity {
                 startActivity(intent);
                 break;
             case 2:
-                fragment = new Disponibilidad();
+                Intent intent1 = new Intent(getApplicationContext(), Disponibilidad.class);
+                startActivity(intent1);
                 break;
             case 3:
                 fragment = new Calendario();
