@@ -263,7 +263,7 @@ public class MyActivity extends Activity {
             mDrawerLayout.closeDrawer(mDrawerList);
         } else {
             // error in creating fragment
-            Log.e("Ramiro", "MainActivity - Error cuando se creo el fragment");
+            Log.e("FC'Sport", "MainActivity - Error cuando se creo el fragment");
         }
     }
 

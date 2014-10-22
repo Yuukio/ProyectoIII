@@ -41,7 +41,7 @@
     </RelativeLayout>
 
     <TextView
-        android:layout_width="330dp"
+        android:layout_width="match_parent"
         android:layout_height="1dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/textView4"
@@ -84,7 +84,7 @@
     </RelativeLayout>
 
     <TextView
-        android:layout_width="330dp"
+        android:layout_width="match_parent"
         android:layout_height="1dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/textView5"
