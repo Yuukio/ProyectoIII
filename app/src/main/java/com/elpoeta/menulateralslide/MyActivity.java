@@ -30,65 +30,6 @@ import java.util.ArrayList;
 
 public class MyActivity extends Activity {
 
-    /****************************/
-    //Solo los taps, sin el menu lateral
-    /*
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            //setContentView(R.layout.activity_my);  //se saca porque sino se solapan
-
-            ActionBar actionBar = getSupportActionBar();
-
-            //INDICAR TITULO Y SUBTITULO
-            actionBar.setTitle("Perfil de equipo");
-
-
-            //MODO TABS EN ACTIONBAR
-            actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-
-            //CREAR TABS
-            ActionBar.Tab tab = actionBar.newTab().setText("Datos").setTabListener(new TabsListener(this, "datos", Datos.class));
-            actionBar.addTab(tab);
-
-            tab = actionBar.newTab().setText("Miembros").setTabListener(new TabsListener(this, "Miembros", Miembros.class));
-            actionBar.addTab(tab);
-
-            tab = actionBar.newTab().setText("Favoritos").setTabListener(new TabsListener(this, "Favoritos", Favoritos.class));
-            actionBar.addTab(tab);
-
-
-        }
-
-        public class TabsListener  implements ActionBar.TabListener {
-
-            private Fragment fragment;
-            private final String tag;
-
-            public TabsListener(Activity activity, String tag, Class cls) {
-                this.tag = tag;
-                fragment = Fragment.instantiate(activity, cls.getName());
-            }
-
-            public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
-                ft.replace(android.R.id.content, fragment, tag);
-            }
-
-            public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
-                ft.remove(fragment);
-            }
-
-            public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {}
-        }
-
-    }
-*/
-
-/*****************************************************/
-
-//Menu lateral sin taps, hay que conectarlos
-
-
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;

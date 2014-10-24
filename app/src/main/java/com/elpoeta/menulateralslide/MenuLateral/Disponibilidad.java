@@ -35,38 +35,38 @@ public class Disponibilidad extends ActionBarActivity{
         TabHost.TabSpec spec = tabHost.newTabSpec("tag1"); //creamos la variable para agregar un tab
 
         //llenamos pestana por pestana.
-        spec.setIndicator("do");//nombreamos la pestana
-        spec.setContent(R.id.DO);//le indicamos asia cual pestana va dirigida
+        spec.setIndicator("d");//nombreamos la pestana
+        spec.setContent(R.id.D);//le indicamos asia cual pestana va dirigida
         tabHost.addTab(spec);//la agregamos
 
         spec = tabHost.newTabSpec("tag2");//aqui estamos reutilizando la misma variable spec, es lo mismo decir = TabHost.TabSpec spec2 = tabHost.newTabSpec("tag2");
-        spec.setIndicator("lu");
-        spec.setContent(R.id.lu);
+        spec.setIndicator("l");
+        spec.setContent(R.id.l);
         tabHost.addTab(spec);
 
         spec = tabHost.newTabSpec("tag3");
-        spec.setIndicator("ma");
-        spec.setContent(R.id.ma);
+        spec.setIndicator("k");
+        spec.setContent(R.id.k);
         tabHost.addTab(spec);
 
         spec = tabHost.newTabSpec("tag4");
-        spec.setIndicator("mi");
-        spec.setContent(R.id.mi);
+        spec.setIndicator("m");
+        spec.setContent(R.id.m);
         tabHost.addTab(spec);
 
         spec = tabHost.newTabSpec("tag5");
-        spec.setIndicator("ju");
-        spec.setContent(R.id.ju);
+        spec.setIndicator("j");
+        spec.setContent(R.id.j);
         tabHost.addTab(spec);
 
         spec = tabHost.newTabSpec("tag6");
-        spec.setIndicator("vi");
-        spec.setContent(R.id.vi);
+        spec.setIndicator("v");
+        spec.setContent(R.id.v);
         tabHost.addTab(spec);
 
         spec = tabHost.newTabSpec("tag7");
-        spec.setIndicator("sa");
-        spec.setContent(R.id.sa);
+        spec.setIndicator("s");
+        spec.setContent(R.id.s);
         tabHost.addTab(spec);
 
 
