@@ -14,11 +14,11 @@
     <ListView
         android:id="@+id/list_slidermenu"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:choiceMode="singleChoice"
-        android:divider="@color/list_divider"
+        android:divider="#67000000"
         android:dividerHeight="1dp"
         android:listSelector="@drawable/list_selector"
-        android:background="@color/list_background"/>
+        android:background="#07000000"/>
 </android.support.v4.widget.DrawerLayout>
