@@ -26,7 +26,7 @@
                 android:layout_height="match_parent"
                 android:text="BUSCAR RETO"
                 android:id="@+id/button"
-                android:background="#21828282"
+                android:background="@drawable/estilo_btn_buscar_reto"
                 android:textSize="30dp"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
@@ -44,10 +44,10 @@
                 android:id="@+id/button2"
                 android:layout_weight="0.8"
                 android:textSize="19dp"
-                android:background="#2d000000"
                 android:textColor="#FFFFFF"
                 android:textAllCaps="false"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:background="@drawable/estilo_btn_principales"/>
 
             <TextView
                 android:layout_width="1dp"
@@ -62,7 +62,7 @@
                 android:id="@+id/button3"
                 android:layout_weight="0.8"
                 android:textSize="19dp"
-                android:background="#2d000000"
+                android:background="@drawable/estilo_btn_principales"
                 android:textColor="#FFFFFF"
                 android:textAllCaps="false"
                 android:textStyle="bold" />
@@ -88,7 +88,7 @@
                 android:id="@+id/button4"
                 android:layout_weight="0.8"
                 android:textSize="19dp"
-                android:background="#2d000000"
+                android:background="@drawable/estilo_btn_principales"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
 
@@ -106,7 +106,7 @@
                 android:id="@+id/button5"
                 android:layout_weight="0.8"
                 android:textSize="19dp"
-                android:background="#2d000000"
+                android:background="@drawable/estilo_btn_principales"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold" />
 
