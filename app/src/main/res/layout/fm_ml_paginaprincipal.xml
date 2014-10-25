@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/imag">
+    android:background="@drawable/ima3">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -29,7 +29,11 @@
                 android:background="@drawable/estilo_btn_buscar_reto"
                 android:textSize="30dp"
                 android:textColor="#FFFFFF"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:freezesText="false"
+                android:focusable="false"
+                android:soundEffectsEnabled="false"
+                android:textAllCaps="false" />
         </LinearLayout>
 
         <LinearLayout
@@ -130,7 +134,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/textView2"
-                android:background="#bc000000" />
+                android:background="#bc000000"
+                android:textColor="#ffffffff"/>
         </LinearLayout>
     </LinearLayout>
 
