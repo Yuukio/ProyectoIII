@@ -16,14 +16,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MenuLateral.PerfilEquipo">
+        <activity android:name=".MenuLateral.PerfilEquipo" >
             android:parentActivityName=".MyActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MyActivity" />
         </activity>
-        <activity android:name=".MenuLateral.Disponibilidad">
+        <activity android:name=".MenuLateral.Disponibilidad" >
             android:parentActivityName=".MyActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MyActivity" />
+        </activity>
+        <activity
+            android:name=".PaginaPrincipal.Canchas"
+            android:label="@string/title_activity_canchas" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MyActivity" />
+        </activity>
+        <activity
+            android:name=".PaginaPrincipal.Equipos"
+            android:label="@string/title_activity_equipos" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MyActivity" />
+        </activity>
+        <activity
+            android:name=".PaginaPrincipal.Ranking"
+            android:label="@string/title_activity_ranking" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MyActivity" />

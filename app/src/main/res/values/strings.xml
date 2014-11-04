@@ -8,18 +8,18 @@
     <string name="drawer_close">Se cerro el menu lateral</string>
 
     <!-- Nombres de los items -->
-    <string-array name="nav_drawer_items">
-        <item >Perfil principal</item>
-        <item >Perfil de equipo</item>
-        <item >Disponibilidad</item>
-        <item >Calendario</item>
-        <item >Historial</item>
-        <item >Reseñas</item>
-        <item >Cerrar sesion</item>
+    <string-array name="lista_nombre_layouts">
+        <item>FC-Sport</item>
+        <item>Perfil de equipo</item>
+        <item>Disponibilidad</item>
+        <item>Calendario</item>
+        <item>Historial</item>
+        <item>Reseñas</item>
+        <item>Cerrar sesion</item>
     </string-array>
 
     <!-- Iconos de los items -->
-    <array name="nav_drawer_icons">
+    <array name="lista_nombre_iconos">
         <item>@drawable/principal</item>
         <item>@drawable/perfil</item>
         <item>@drawable/disponible</item>
@@ -31,5 +31,8 @@
 
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
+    <string name="title_activity_canchas">Canchas</string>
+    <string name="title_activity_equipos">Equipos</string>
+    <string name="title_activity_ranking">Ranking</string>
 
 </resources>

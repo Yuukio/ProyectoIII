@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.elpoeta.menulateralslide.MenuLateral.Calendario;
@@ -55,11 +56,10 @@ public class MyActivity extends Activity {
         mTitle = mDrawerTitle = getTitle();
 
         // load slide menu items
-        navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
+        navMenuTitles = getResources().getStringArray(R.array.lista_nombre_layouts);
 
         // nav drawer icons from resources
-        navMenuIcons = getResources()
-                .obtainTypedArray(R.array.nav_drawer_icons);
+        navMenuIcons = getResources().obtainTypedArray(R.array.lista_nombre_iconos);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.list_slidermenu);
@@ -81,8 +81,7 @@ public class MyActivity extends Activity {
         mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
 
         // setting the nav drawer list adapter
-        adapter = new NavDrawerListAdapter(getApplicationContext(),
-                navDrawerItems);
+        adapter = new NavDrawerListAdapter(getApplicationContext(),navDrawerItems);
         mDrawerList.setAdapter(adapter);
 
         // enabling action bar app icon and behaving it as toggle button
@@ -112,6 +111,18 @@ public class MyActivity extends Activity {
             // on first time display view for first nav item
             displayView(0);
         }
+
+        /*
+        Button btn = (Button) findViewById(R.id.btn_canchas);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Canchas.class);
+                startActivity(intent);
+            }
+        });
+        */
     }
 
 
