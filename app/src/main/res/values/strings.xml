@@ -6,6 +6,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="drawer_open">Se abrio el menu lateral</string>
     <string name="drawer_close">Se cerro el menu lateral</string>
+    <string name="facebook_app_id">1519405328298165</string>
 
     <!-- Nombres de los items -->
     <string-array name="lista_nombre_layouts">
@@ -34,5 +35,7 @@
     <string name="title_activity_canchas">Canchas</string>
     <string name="title_activity_equipos">Equipos</string>
     <string name="title_activity_ranking">Ranking</string>
+    <string name="title_activity_facebook_login">FacebookLogin</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
