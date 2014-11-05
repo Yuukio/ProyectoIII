@@ -111,18 +111,6 @@ public class MyActivity extends Activity {
             // on first time display view for first nav item
             displayView(0);
         }
-
-        /*
-        Button btn = (Button) findViewById(R.id.btn_canchas);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Canchas.class);
-                startActivity(intent);
-            }
-        });
-        */
     }
 
 
@@ -194,7 +182,8 @@ public class MyActivity extends Activity {
                 fragment = new Calendario();
                 break;
             case 4:
-                fragment = new Historial();
+                Intent intent3 = new Intent(getApplicationContext(), Historial.class);
+                startActivity(intent3);
                 break;
             case 5:
                 fragment = new Resenas();

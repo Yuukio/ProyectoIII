@@ -43,7 +43,7 @@ public class NavDrawerListAdapter extends BaseAdapter {
 		if (convertView == null) {
             LayoutInflater mInflater = (LayoutInflater)
                     context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-            convertView = mInflater.inflate(R.layout.estilo_lista_items, null);
+            convertView = mInflater.inflate(R.layout.lv_estilo_menulateral, null);
         }
          
         ImageView imgIcon = (ImageView) convertView.findViewById(R.id.icon);

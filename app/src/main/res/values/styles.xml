@@ -5,4 +5,26 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Victoria" parent="@android:style/TextAppearance.Medium">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:text">Victoria</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal|fill_vertical</item>
+        <item name="android:textColor">#ff15ba00</item>
+    </style>
+
+    <style name="Derrota" parent="@android:style/TextAppearance.Medium">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:text">Derrota</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal|fill_vertical</item>
+        <item name="android:textColor">#ffba1200</item>
+    </style>
+
 </resources>

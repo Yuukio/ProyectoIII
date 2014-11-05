@@ -1,19 +1,102 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.elpoeta.menulateralslide.PaginaPrincipal.Ranking">
+    tools:context="com.elpoeta.menulateralslide.PaginaPrincipal.Ranking"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Ranking"
-        android:id="@+id/textView"
-        android:layout_centerVertical="true"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffffff"
+            android:layout_weight="0.6"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Equipos"
+                android:id="@+id/id_equipos"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="#ffffffff"
+                android:lines="2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="false"
+                android:autoText="false"
+                android:background="#ff7b7b7b" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView5"
+            android:background="#ffffffff" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearance"
+                android:text="Pts"
+                android:id="@+id/id_pts"
+                android:layout_weight="0.8"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="#ff7b7b7b"
+                android:textColor="#ffffffff" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:id="@+id/textView"
+                android:background="#ffffffff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="PJ"
+                android:id="@+id/id_pj"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="#ff7b7b7b"
+                android:textColor="#ffffffff" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:id="@+id/textView2"
+                android:background="#ffffffff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="GF"
+                android:id="@+id/id_gf"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="#ff7b7b7b"
+                android:textColor="#ffffffff" />
+
+        </TableRow>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lista_ranking"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
-</RelativeLayout>
+</LinearLayout>

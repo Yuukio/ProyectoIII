@@ -1,4 +1,4 @@
-package com.elpoeta.menulateralslide.PerfilEquipoTaps;
+package com.elpoeta.menulateralslide.AdaptadorListas;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.elpoeta.menulateralslide.R;
 
-public class M_Adaptador_LV extends BaseAdapter {
+public class Miembros_Adaptador_LV extends BaseAdapter {
     // Declare Variables
     Context context;
     String[] nombres;
@@ -18,7 +18,7 @@ public class M_Adaptador_LV extends BaseAdapter {
     String[] goles;
     LayoutInflater inflater;
 
-    public M_Adaptador_LV(Context context, String[] nombres, int[] imagenes, String[] goles) {
+    public Miembros_Adaptador_LV(Context context, String[] nombres, int[] imagenes, String[] goles) {
         this.context = context;
         this.nombres = nombres;
         this.imagenes = imagenes;

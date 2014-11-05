@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+
+
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Pantalla Historial"
-        android:id="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentBottom="false"
-        android:layout_alignParentTop="true"
-        android:gravity="center_vertical|center_horizontal"
-        android:textColor="#ffffffff"
-        android:background="#ff59202b"
-        android:clickable="true"
-        android:autoText="false" />
+        android:id="@+id/lista_historial" />
 </LinearLayout>
