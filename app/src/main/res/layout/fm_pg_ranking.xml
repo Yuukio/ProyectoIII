@@ -65,24 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="PJ"
-                android:id="@+id/id_pj"
-                android:layout_weight="1"
-                android:gravity="center_vertical|center_horizontal"
-                android:background="#ff7b7b7b"
-                android:textColor="#ffffffff" />
-
-            <TextView
-                android:layout_width="1dp"
-                android:layout_height="match_parent"
-                android:id="@+id/textView2"
-                android:background="#ffffffff" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="GF"
+                android:text="Ranking"
                 android:id="@+id/id_gf"
                 android:layout_weight="1"
                 android:gravity="center_vertical|center_horizontal"

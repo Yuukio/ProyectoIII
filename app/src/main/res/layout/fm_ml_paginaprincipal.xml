@@ -29,11 +29,7 @@
                 android:background="@drawable/estilo_btn_buscar_reto"
                 android:textSize="30dp"
                 android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:freezesText="false"
-                android:focusable="false"
-                android:soundEffectsEnabled="false"
-                android:textAllCaps="false" />
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -49,7 +45,6 @@
                 android:layout_weight="0.8"
                 android:textSize="19dp"
                 android:textColor="#FFFFFF"
-                android:textAllCaps="false"
                 android:textStyle="bold"
                 android:background="@drawable/estilo_btn_principales"/>
 
@@ -68,7 +63,6 @@
                 android:textSize="19dp"
                 android:background="@drawable/estilo_btn_principales"
                 android:textColor="#FFFFFF"
-                android:textAllCaps="false"
                 android:textStyle="bold" />
         </LinearLayout>
 

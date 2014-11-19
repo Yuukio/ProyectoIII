@@ -22,7 +22,8 @@
             android:layout_marginLeft="25dp"
             android:layout_alignBottom="@+id/on1"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:textColor="#ff414141" />
 
         <Switch
             android:layout_width="wrap_content"
@@ -65,7 +66,8 @@
             android:layout_alignBottom="@+id/on2"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginLeft="25dp" />
+            android:layout_marginLeft="25dp"
+            android:textColor="#ff404040" />
 
         <Switch
             android:layout_width="wrap_content"
@@ -105,7 +107,8 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Seleccionar horas diarias"
             android:id="@+id/textView3"
-            android:gravity="center" />
+            android:gravity="center"
+            android:textColor="#ff404040" />
 
     </GridLayout>
 

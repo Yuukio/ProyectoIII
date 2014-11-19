@@ -5,12 +5,9 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
-    <Button
-        android:layout_width="176dp"
+    <ExpandableListView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quiero poner esto en dos lineas"
-        android:id="@+id/button"
-        android:layout_gravity="center_horizontal"
-        android:textAllCaps="false"
-        android:lines="2" />
+        android:id="@+id/expandableListView"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
+<LinearLayout
+    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
+    <CalendarView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Pantalla Calendario"
-        android:id="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentBottom="false"
-        android:layout_alignParentTop="true"
-        android:gravity="center_vertical|center_horizontal"
-        android:textColor="#ffffffff"
-        android:background="#ff214659"
-        android:clickable="true"
-        android:autoText="false" />
-
-</RelativeLayout>
+        android:id="@+id/calendarView2"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

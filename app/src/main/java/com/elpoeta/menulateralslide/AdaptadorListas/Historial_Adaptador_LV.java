@@ -1,6 +1,7 @@
 package com.elpoeta.menulateralslide.AdaptadorListas;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,6 +80,18 @@ public class Historial_Adaptador_LV extends BaseAdapter {
         txtListGF.setText(listGF[position]);
         txtListGC.setText(listGC[position]);
         txtListPts.setText(listPts[position]);
+
+        if(position%2 == 0) {
+            itemView.setBackgroundColor(Color.argb(255, 227, 227, 227));
+        }else{
+            itemView.setBackgroundColor(Color.argb(255, 255, 255, 255));
+        }
+
+        if(txtGanador.getText() == "VICTORIA"){
+            txtGanador.setTextColor(Color.argb(255, 0, 128, 0));
+        }else {
+            txtGanador.setTextColor(Color.argb(255, 192, 0, 0));
+        }
 
         return itemView;
     }

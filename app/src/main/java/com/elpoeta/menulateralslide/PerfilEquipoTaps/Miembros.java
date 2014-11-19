@@ -51,22 +51,8 @@ public class Miembros extends Fragment {
             R.drawable.ic_launcher
     };
 
-    String[] goles = {
-            "12 goles",
-            "19 goles",
-            "14 goles",
-            "7 goles",
-            "12 goles",
-            "19 goles",
-            "14 goles",
-            "7 goles",
-            "12 goles",
-            "19 goles",
-            "14 goles",
-            "7 goles",
-            "12 goles",
-            "19 goles",
-            "14 goles"
+    String[] goles = {"12 goles", "19 goles", "14 goles", "7 goles", "12 goles", "19 goles", "14 goles",
+            "7 goles", "12 goles", "19 goles", "14 goles", "7 goles", "12 goles", "19 goles", "14 goles"
     };
 
     @Override

@@ -60,27 +60,19 @@
             android:id="@+id/txt_pts_r"
             android:layout_weight="0.8"
             android:gravity="center_vertical|center_horizontal"
-            android:background="#ffe1e1e1" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="PJ"
-            android:id="@+id/txt_pj_r"
-            android:layout_weight="1"
-            android:gravity="center_vertical|center_horizontal"
-            android:background="#ffebebeb" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="GF"
-            android:id="@+id/txt_gf_r"
-            android:layout_weight="1"
-            android:gravity="center_vertical|center_horizontal"
             android:background="#fff4f4f4" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1"
+            android:id="@+id/txt_puesto_r"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="#ffe0e0e0"
+            android:textStyle="bold"
+            android:textColor="#ff414141" />
     </TableRow>
 
 </LinearLayout>

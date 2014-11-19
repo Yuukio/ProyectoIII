@@ -43,9 +43,7 @@ public class Ranking extends ActionBarActivity {
 
     String[] listPts_ranking = {"327", "312", "291", "237", "129", "69", "51", "12"};
 
-    String[] listPJ_ranking = {"51", "42", "72", "27", "39", "12", "15", "9"};
-
-    String[] listGF_ranking = {"32", "50", "27", "21", "12", "19", "17", "10"};
+    String[] listPuesto_ranking = {"1", "2", "3", "4", "5", "6", "7", "8"};
 
 
     @Override
@@ -55,7 +53,7 @@ public class Ranking extends ActionBarActivity {
 
 
         final ListView lista = (ListView) findViewById(R.id.lista_ranking);
-        adapter = new Ranking_Adaptador_LV(this, listaEquipos, listaImagenes, listPts_ranking, listPJ_ranking, listGF_ranking);
+        adapter = new Ranking_Adaptador_LV(this, listaEquipos, listaImagenes, listPts_ranking, listPuesto_ranking);
         lista.setAdapter(adapter);
 
 
