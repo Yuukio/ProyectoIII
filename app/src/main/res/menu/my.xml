@@ -2,8 +2,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MyActivity" >
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+
+    <item android:id="@+id/s_configuracion"
+        android:title="Configuracion"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/s_sugerir_cambios"
+        android:title="Sugerir cambios"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/s_recomendarnos"
+        android:title="Recomendarnos"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/s_valorar_app"
+        android:title="Valorar app"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/s_ayuda"
+        android:title="Ayuda?"
         android:orderInCategory="100"
         app:showAsAction="never" />
 </menu>

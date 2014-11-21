@@ -1,20 +1,26 @@
 package com.elpoeta.menulateralslide;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 
 import com.elpoeta.menulateralslide.MenuLateral.Calendario;
@@ -25,6 +31,7 @@ import com.elpoeta.menulateralslide.MenuLateral.PerfilEquipo;
 import com.elpoeta.menulateralslide.MenuLateral.Resenas;
 import com.elpoeta.menulateralslide.MenuPersonalizado.NavDrawerItem;
 import com.elpoeta.menulateralslide.MenuPersonalizado.NavDrawerListAdapter;
+import com.elpoeta.menulateralslide.Settings.S_Configuracion;
 
 import java.util.ArrayList;
 
@@ -124,26 +131,7 @@ public class MyActivity extends Activity {
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.my, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // toggle nav drawer on selecting action bar app icon/title
-        if (mDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        // Handle action bar actions click
-        switch (item.getItemId()) {
-            case R.id.action_settings:
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
 
 
      //Called when invalidateOptionsMenu() is triggered
@@ -152,7 +140,7 @@ public class MyActivity extends Activity {
     public boolean onPrepareOptionsMenu(Menu menu) {
         // if nav drawer is opened, hide the action items
         boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-        menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
+        menu.findItem(R.id.s_configuracion).setVisible(!drawerOpen);
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -233,6 +221,94 @@ public class MyActivity extends Activity {
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
 
+    /**********************Menu settings***********************/
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu items for use in the action bar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.my, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // toggle nav drawer on selecting action bar app icon/title
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        // Handle action bar actions click
+        switch (item.getItemId()) {
+            case R.id.s_configuracion:
+                Intent intent = new Intent(getApplicationContext(), S_Configuracion.class);
+                startActivity(intent);
+                return true;
+
+            case R.id.s_sugerir_cambios:
+
+                LayoutInflater inflater = getLayoutInflater();
+
+                View dialoglayout = inflater.inflate(R.layout.s_sugerir_cambio, null);
+
+                final EditText etAsunto = (EditText) dialoglayout.findViewById(R.id.et_EmailAsunto);
+                final EditText etMensaje = (EditText) dialoglayout.findViewById(R.id.et_EmailMensaje);
+
+                Button btnEnviarMail = (Button) dialoglayout.findViewById(R.id.btnEnviarMail);
+                btnEnviarMail.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        String subject = etAsunto.getText().toString();
+                        String message = etMensaje.getText().toString();
+
+                        Intent email = new Intent(Intent.ACTION_SEND);
+                        email.putExtra(Intent.EXTRA_EMAIL, new String[] { "micorre@gmail.com"});
+                        email.putExtra(Intent.EXTRA_SUBJECT, subject);
+                        email.putExtra(Intent.EXTRA_TEXT, " mensaje " + message);
+
+                        // need this to prompts email client only
+                        email.setType("message/rfc822");
+                        startActivity(Intent.createChooser(email, "Seleciona un cliente de correo"));
+
+                    }
+                });
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(MyActivity.this);
+                builder.setView(dialoglayout);
+                builder.show();
+
+                return true;
+
+            case R.id.s_recomendarnos:
+                return true;
+
+            case R.id.s_valorar_app:
+
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(MyActivity.this);
+                // Setting Dialog Message
+                alertDialog.setTitle("Valorar aplicacion");
+                alertDialog.setMessage("Tu comentario es muy importante , por favor VALORA " +
+                        "o deja un comentario.");
+
+                alertDialog.setCancelable(true);
+                alertDialog.setPositiveButton("Valorar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int which) {
+
+                        final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                        try {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + appPackageName)));
+                        } catch (android.content.ActivityNotFoundException anfe) {}
+                    }
+                });
+                alertDialog.show();
+
+                return true;
+
+            case R.id.s_ayuda:
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
 }
