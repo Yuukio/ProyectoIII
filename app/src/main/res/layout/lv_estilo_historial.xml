@@ -1,67 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
     android:orientation="horizontal"
-    android:padding="5dip">
+    android:background="#ffffffff">
 
-    <!--  listrow  -->
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/relativeLayout">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.08">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/txt_ganador"
+            android:background="#ff007c39" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text=" vs "
-            android:id="@+id/vs"
-            android:layout_toEndOf="@+id/thumbnail"
-            android:gravity="center_vertical"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/thumbnail" />
+            android:layout_height="match_parent"
+            android:weightSum="1">
 
-        <LinearLayout android:id="@+id/thumbnail"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="3dip"
-            android:layout_alignParentLeft="true"
+            <LinearLayout android:id="@+id/thumbnail"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="3dip"
+                android:layout_alignParentLeft="true"
 
-            android:background="#ffc0c0c0"
-            android:layout_marginBottom="2dp">
+                android:background="#ffc0c0c0"
+                android:layout_marginBottom="2dp">
 
-            <ImageView
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ima1" />
+            </LinearLayout>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/ima1" />
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="VS"
+                android:id="@+id/textView"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="#c0002e40" />
+
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:padding="3dip"
-            android:background="#ffc0c0c0"
-            android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/vs"
-            android:layout_toEndOf="@+id/vs">
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/ima2" />
-        </LinearLayout>
-    </RelativeLayout>
+            <LinearLayout android:id="@+id/thumbnail"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:padding="3dip"
+                android:layout_alignParentLeft="true"
+
+                android:background="#ffc0c0c0"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="8dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/ima2" />
+            </LinearLayout>
+
+            </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/relativeLayout"
-        android:layout_toEndOf="@+id/relativeLayout"
-        android:orientation="vertical">
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp">
 
         <TableRow
             android:layout_width="match_parent"
@@ -72,17 +104,17 @@
             android:layout_weight="1">
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="GF"
                 android:id="@+id/textView5"
                 android:layout_weight="1"
                 android:gravity="center_vertical|right"
-                android:textColor="#ff004764" />
+                android:textColor="#ff002e40" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/txt_gf"
                 android:layout_weight="1"
@@ -91,17 +123,17 @@
                 android:textColor="#ff949494" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="GC"
                 android:id="@+id/textView6"
                 android:layout_weight="1"
                 android:gravity="center_vertical|right"
-                android:textColor="#ff004764" />
+                android:textColor="#ff002e40" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/txt_gc"
                 android:layout_weight="1"
@@ -110,21 +142,21 @@
                 android:textColor="#ff949494" />
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Pts"
                 android:id="@+id/textView7"
                 android:layout_weight="1"
                 android:gravity="center_vertical|right"
-                android:textColor="#ff004764" />
+                android:textColor="#ff002e40" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/txt_pts"
-                android:layout_weight="0.2"
-                android:gravity="center_vertical|right"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
                 android:text="+3"
                 android:textColor="#ff949494"
                 android:layout_marginRight="2dp"/>
@@ -132,33 +164,32 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:layout_weight="1">
 
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Victoria"
-                android:id="@+id/txt_ganador"
-                android:gravity="center_vertical|center_horizontal"
-                android:layout_weight="2.5"
-                android:textColor="#ff555555" />
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="22/11/14"
+                android:id="@+id/txt_fecha_historial"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#b4002e40" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="18/11/14"
-                android:id="@+id/textView"
-                android:gravity="center_vertical|right"
-                android:textColor="#ff004764"
-                android:layout_marginRight="2dp"/>
-
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="02:00 pm"
+                android:id="@+id/txt_hora_historial"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#b4002e40"
+                android:textSize="12dp" />
         </TableRow>
 
     </LinearLayout>
-
-    <!-- titulo de la categoria -->
 
 </LinearLayout>

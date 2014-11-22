@@ -81,15 +81,19 @@ public class Historial_Adaptador_LV extends BaseAdapter {
         txtListGC.setText(listGC[position]);
         txtListPts.setText(listPts[position]);
 
+        /*
         if(position%2 == 0) {
             itemView.setBackgroundColor(Color.argb(255, 227, 227, 227));
         }else{
             itemView.setBackgroundColor(Color.argb(255, 255, 255, 255));
         }
+        */
 
         if(txtGanador.getText() == "VICTORIA"){
+            txtGanador.setBackgroundColor(Color.argb(255, 0, 128, 0));
             txtGanador.setTextColor(Color.argb(255, 0, 128, 0));
         }else {
+            txtGanador.setBackgroundColor(Color.argb(255, 192, 0, 0));
             txtGanador.setTextColor(Color.argb(255, 192, 0, 0));
         }
 
