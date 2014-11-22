@@ -2,47 +2,22 @@
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <!-- disabled
-    <item android:state_enabled="false" >
-        <shape android:shape="rectangle">
-            <gradient
-                android:startColor="#454545"
-                android:endColor="#454545"
-                android:angle="-90"
-                android:type="linear"
-                />
-            <corners android:radius="5dp" />
-        </shape>
-    </item> -->
-
     <!-- pressed -->
     <item android:state_pressed="true" android:state_enabled="true" >
         <shape android:shape="rectangle">
             <gradient
-                android:startColor="#4b000000"
-                android:endColor="#4b000000"
+                android:startColor="#a0000000"
+                android:endColor="#a0000000"
                 />
         </shape>
     </item>
-
-    <!-- focused
-    <item android:state_focused="true">
-        <shape android:shape="rectangle">
-            <gradient
-                android:startColor="#4e000000"
-                android:endColor="#4e000000"
-                />
-            <corners android:radius="5dp" />
-            <stroke android:width="2dp" android:color="#dddddd"/>
-        </shape>
-    </item> -->
 
     <!-- default -->
     <item>
         <shape android:shape="rectangle">
             <gradient
-                android:startColor="#2d000000"
-                android:endColor="#2d000000"
+                android:startColor="#82000000"
+                android:endColor="#82000000"
                 />
         </shape>
     </item>
