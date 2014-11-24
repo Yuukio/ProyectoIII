@@ -38,5 +38,6 @@
     <string name="title_activity_facebook_login">FacebookLogin</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_s__settings">S_Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
 
 </resources>
