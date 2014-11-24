@@ -32,14 +32,11 @@ import com.elpoeta.menulateralslide.MenuLateral.Resenas;
 import com.elpoeta.menulateralslide.MenuPersonalizado.NavDrawerItem;
 import com.elpoeta.menulateralslide.MenuPersonalizado.NavDrawerListAdapter;
 import com.elpoeta.menulateralslide.Settings.S_Configuracion;
-import com.letsgo.facebooklogin.MainFragment;
-
-import android.support.v4.app.FragmentActivity;
 
 import java.util.ArrayList;
 
 
-public class MyActivity extends FragmentActivity {
+public class MyActivity extends Activity {
 
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
@@ -57,23 +54,11 @@ public class MyActivity extends FragmentActivity {
 
     private ArrayList<NavDrawerItem> navDrawerItems;
     private NavDrawerListAdapter adapter;
-    private MainFragment mainFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (savedInstanceState == null) {
-            // Add the fragment on initial activity setup
-            mainFragment = new MainFragment();
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .add(android.R.id.content, mainFragment)
-                    .commit();
-        } else {
-            // Or set the fragment from restored state info
-            mainFragment = (MainFragment) getSupportFragmentManager()
-                    .findFragmentById(android.R.id.content);
-        }
+        setContentView(R.layout.activity_my);
 
         mTitle = mDrawerTitle = getTitle();
 

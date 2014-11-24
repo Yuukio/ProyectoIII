@@ -4,29 +4,285 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffececec">
 
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Bienvenido a los"
-        android:id="@+id/textView"
+        android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
-        android:gravity="bottom|center"
-        android:background="#ffd0edff" />
+        android:orientation="vertical"
+        android:layout_marginTop="15dp">
 
-    <TextView
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="La vecindad del chavo"
+            android:id="@+id/txt_nombre_datos"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            android:background="#ff004863"
+            android:textColor="#ffececec"
+            android:lines="2" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Datos del Equipo"
-        android:id="@+id/txt_pts_r"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
-        android:gravity="top|center"
-        android:background="#ffd0edff" />
+        android:layout_height="match_parent"
+        android:layout_weight="0.9"
+        android:layout_margin="15dp">
 
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
 
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:id="@+id/ima_datos"
+                android:background="#ffa3a3a3"
+                android:padding="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_gravity="bottom">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="8dp">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="1234567"
+                        android:id="@+id/txt_doles_datos"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#ff002c41" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Goles"
+                        android:id="@+id/textView15"
+                        android:layout_gravity="right|center_horizontal"
+                        android:layout_weight="0.5"
+                        android:gravity="left|center"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#a8002c41" />
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="8dp">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="1234567"
+                        android:id="@+id/txt_pts_datos"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#ff002c41" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Puntos"
+                        android:id="@+id/textView13"
+                        android:layout_gravity="right|center_horizontal"
+                        android:layout_weight="0.5"
+                        android:gravity="left|center"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#a8002c41"
+                        android:textStyle="bold"/>
+                </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="1234567"
+                        android:id="@+id/txt_ranked_datos"
+                        android:layout_weight="1"
+                        android:gravity="center|right"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="#ff002c41" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Ranked"
+                        android:id="@+id/textView10"
+                        android:layout_gravity="right|center_horizontal"
+                        android:layout_weight="0.5"
+                        android:gravity="left|center"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="#a8002c41"
+                        android:textStyle="bold"/>
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#ff004863">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="VICTORIAS"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:textColor="#ffececec" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1234567"
+            android:id="@+id/txt_victorias_datos"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:textColor="#ffececec" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="DERROTAS"
+            android:id="@+id/textView16"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:textColor="#ffececec" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="1234567"
+            android:id="@+id/txt_derrotas_datos"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:textColor="#ffececec" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.85"
+        android:background="#ff004863"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView19"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dp"
+            android:password="false"
+            android:background="#ffececec" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:ems="4"
+            android:id="@+id/txt_descripcion_datos"
+            android:lines="4"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:textColor="#ffececec"
+            android:background="#ff004863"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="Descripcion" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Lider"
+            android:id="@+id/textView21"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textColor="#ff002c41" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Luis Solano Mendez"
+            android:id="@+id/txt_lider_datos"
+            android:layout_weight="1"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="#ff002c41" />
+    </LinearLayout>
 </LinearLayout>

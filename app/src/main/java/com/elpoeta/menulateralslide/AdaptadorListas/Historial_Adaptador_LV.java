@@ -90,11 +90,11 @@ public class Historial_Adaptador_LV extends BaseAdapter {
         */
 
         if(txtGanador.getText() == "VICTORIA"){
-            txtGanador.setBackgroundColor(Color.argb(255, 0, 128, 0));
-            txtGanador.setTextColor(Color.argb(255, 0, 128, 0));
+            txtGanador.setBackgroundColor(Color.argb(160, 0, 98, 4));
+            txtGanador.setTextColor(Color.argb(0, 0, 98, 4));
         }else {
-            txtGanador.setBackgroundColor(Color.argb(255, 192, 0, 0));
-            txtGanador.setTextColor(Color.argb(255, 192, 0, 0));
+            txtGanador.setBackgroundColor(Color.argb(160, 98, 12, 0));
+            txtGanador.setTextColor(Color.argb(0, 98, 12, 0));
         }
 
         return itemView;
