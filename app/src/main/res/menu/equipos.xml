@@ -1,8 +1,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.elpoeta.menulateralslide.PaginaPrincipal.Equipos" >
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never" />
+    tools:context="com.elpoeta.menulateralslide.MenuLateral.PerfilEquipo" >
+
+    <item android:id="@+id/miembro_equipo"
+        android:icon="@drawable/com_facebook_profile_default_icon"
+        android:showAsAction="ifRoom"
+        android:title="Invitar amigos" />
 </menu>

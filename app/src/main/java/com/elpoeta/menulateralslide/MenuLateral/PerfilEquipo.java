@@ -1,17 +1,23 @@
 package com.elpoeta.menulateralslide.MenuLateral;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import com.elpoeta.menulateralslide.PerfilEquipoTaps.Datos;
 import com.elpoeta.menulateralslide.PerfilEquipoTaps.Favoritos;
 import com.elpoeta.menulateralslide.PerfilEquipoTaps.Miembros;
+import com.elpoeta.menulateralslide.R;
+import com.elpoeta.menulateralslide.Settings.S_Configuracion;
 
-public class PerfilEquipo extends ActionBarActivity{
+public class PerfilEquipo extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +66,41 @@ public class PerfilEquipo extends ActionBarActivity{
             ft.remove(fragment);
         }
 
-        public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {}
+        public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu items for use in the action bar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.equipos, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.miembro_equipo:
+
+                /**********Programar aqui el metodo de agregar miembros de facebook**********/
+
+
+
+                Intent intent = new Intent(getApplicationContext(), S_Configuracion.class);
+                startActivity(intent);
+
+
+
+                /*****************************************************************************/
+
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+
     }
 
 }
