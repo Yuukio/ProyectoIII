@@ -787,6 +787,8 @@
                 </string>
                 <string name="com_facebook_placepicker_subtitle_format" >%1$s • %2$,d were here
                 </string>
+                <string name="com_facebook_image_download_unknown_error" >Unexpected error while downloading an image.
+                </string>
                 <string name="com_facebook_loginview_logged_in_using_facebook" >Logged in using Facebook
                 </string>
                 <string name="com_facebook_picker_done_button_text" >Done
@@ -1003,6 +1005,8 @@ center
                 </string>
                 <string name="com_facebook_internet_permission_error_message" >WebView inicio de sesión requiere permiso INTERNET
                 </string>
+                <string name="com_facebook_image_download_unknown_error" >Error al descargar la imagen.
+                </string>
                 <string name="com_facebook_placepicker_subtitle_were_here_only_format" >es:%1$,d estuvieron aquí
                 </string>
                 <string name="com_facebook_requesterror_relogin" >La aplicación no se conecta con Facebook, inicie sesión y volver a conectar esta aplicación.
@@ -1024,6 +1028,8 @@ center
                 path="C:\Users\Sebastian\Documents\GitHub\ProyectoIII\fblib\facebook\res\values-he\strings.xml"
                 qualifiers="he" >
                 <string name="com_facebook_requesterror_password_changed" >.הסיסמה שלך בפייסבוק השתנתה, אנא חבר מחדש את האפליקציה עם פייסבוק
+                </string>
+                <string name="com_facebook_image_download_unknown_error" >שגיאה בעת הורדת תמונה
                 </string>
                 <string name="com_facebook_requesterror_web_login" >.כדי לאפשר מחדש לאפליקציה להתחבר עם פייסבוק https://www.facebook.com או https://m.facebook.com אנא היכנס דרך
                 </string>
@@ -1126,6 +1132,8 @@ center
                 <string name="com_facebook_nearby" >קרוב אליי
                 </string>
                 <string name="com_facebook_loginview_cancel_action" >בטל
+                </string>
+                <string name="com_facebook_image_download_unknown_error" >שגיאה בעת הורדת תמונה
                 </string>
             </file>
             <file

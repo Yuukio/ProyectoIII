@@ -14,6 +14,7 @@ import java.util.UUID;
  * any of the classes in this package is unsupported, and they may be modified or removed without warning at
  * any time.
  */
+@SuppressWarnings("unused")
 public class PendingCallStore {
     private static final String CALL_ID_ARRAY_KEY = "com.facebook.internal.PendingCallStore.callIdArrayKey";
     private static final String CALL_KEY_PREFIX = "com.facebook.internal.PendingCallStore.";

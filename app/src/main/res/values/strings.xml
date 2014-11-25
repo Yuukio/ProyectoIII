@@ -6,7 +6,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="drawer_open">Se abrio el menu lateral</string>
     <string name="drawer_close">Se cerro el menu lateral</string>
-    <string name="facebook_app_id">1519405328298165</string>
+    <string name="facebook_app_id">775521572514099</string>
 
     <!-- Nombres de los items -->
     <string-array name="lista_nombre_layouts">

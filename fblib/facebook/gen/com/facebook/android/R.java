@@ -357,6 +357,7 @@ containing a value of this type.
     public static final class string {
         public static int com_facebook_choose_friends=0x7f060011;
         public static int com_facebook_dialogloginactivity_ok_button=0x7f060000;
+        public static int com_facebook_image_download_unknown_error=0x7f06001c;
         public static int com_facebook_internet_permission_error_message=0x7f060015;
         public static int com_facebook_internet_permission_error_title=0x7f060014;
         public static int com_facebook_like_button_liked=0x7f060002;

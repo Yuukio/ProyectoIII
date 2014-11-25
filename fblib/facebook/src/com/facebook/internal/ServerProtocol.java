@@ -32,6 +32,7 @@ import java.util.EnumSet;
  * any of the classes in this package is unsupported, and they may be modified or removed without warning at
  * any time.
  */
+@SuppressWarnings("unused")
 public final class ServerProtocol {
     private static final String TAG = ServerProtocol.class.getName();
 
@@ -64,7 +65,7 @@ public final class ServerProtocol {
     // URL components
     private static final String GRAPH_VIDEO_URL_FORMAT = "https://graph-video.%s";
     private static final String GRAPH_URL_FORMAT = "https://graph.%s";
-    public static final String GRAPH_API_VERSION = "v2.1";
+    public static final String GRAPH_API_VERSION = "v2.2";
 
     private static final String LEGACY_API_VERSION = "v1.0";
 
