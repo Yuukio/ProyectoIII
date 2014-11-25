@@ -2,6 +2,7 @@ package com.elpoeta.menulateralslide.loginFacebook;
 
 
 
+import com.elpoeta.menulateralslide.MyActivity;
 import com.elpoeta.menulateralslide.R;
 import java.util.Arrays;
 
@@ -11,6 +12,7 @@ import com.facebook.Response;
 import com.facebook.SessionState;
 import com.facebook.Session;
 import com.facebook.UiLifecycleHelper;
+import com.facebook.model.GraphUser;
 import com.facebook.widget.LoginButton;
 import android.content.Intent;
 import android.os.Bundle;
@@ -47,6 +49,8 @@ public class MainFragment extends Fragment{
     private void onSessionStateChange(Session session, SessionState state, Exception exception) {
         if (state.isOpened()) {
             Log.i(TAG, "Logged in...");
+            Intent intent = new Intent(getActivity(), MyActivity.class);
+            startActivity(intent);
         } else if (state.isClosed()) {
             Log.i(TAG, "Logged out...");
         }
