@@ -1,23 +1,27 @@
 package com.elpoeta.menulateralslide.loginFacebook;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
+import com.elpoeta.menulateralslide.MyActivity;
 import com.elpoeta.menulateralslide.R;
 import com.facebook.AppEventsLogger;
+import com.facebook.widget.LoginButton;
 
 public class LoginActivity extends FragmentActivity {
 
     private MainFragment mainFragment;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         if (savedInstanceState == null) {
             // Add the fragment on initial activity setup
             mainFragment = new MainFragment();
@@ -25,6 +29,7 @@ public class LoginActivity extends FragmentActivity {
                     .beginTransaction()
                     .add(android.R.id.content, mainFragment)
                     .commit();
+
         } else {
             // Or set the fragment from restored state info
             mainFragment = (MainFragment) getSupportFragmentManager()
