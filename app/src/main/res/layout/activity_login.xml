@@ -1,47 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#303040" >
+    android:background="#303040"
+    android:weightSum="1">
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
         android:layout_marginTop="30dp"
         android:gravity="center_horizontal"
-        android:orientation="horizontal" >
+        android:orientation="vertical"
+        android:layout_weight="0.50">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textColor="#AFDEFE"
-            android:textSize="28sp"
-            android:typeface="serif"
-            android:textStyle="italic"
-            android:text="@string/app_name" />
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView2"
+                android:src="@drawable/icono_fc"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#AFDEFE"
+                android:textSize="40dp"
+                android:typeface="serif"
+                android:text="@string/app_name"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Find Challenge - Sport"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#AFDEFE"
+                android:layout_weight="1"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
 
-    <TextView
-        android:id="@+id/profile_name"
-        android:layout_width="174dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:lines="2"
-        android:textSize="17sp"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.50">
 
-    <com.facebook.widget.LoginButton
-        android:id="@+id/authButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp" />
+        <com.facebook.widget.LoginButton
+            android:id="@+id/authButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:lines="2"
+            android:textSize="17sp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
 
 </LinearLayout>
