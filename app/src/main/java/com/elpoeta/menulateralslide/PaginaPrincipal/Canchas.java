@@ -30,20 +30,12 @@ public class Canchas extends FragmentActivity {
      */
     GoogleMap mapa;
     LatLng latLng;
-    MarkerOptions localization = new MarkerOptions();
+    MarkerOptions markerOptions;
 
 
     private final LatLng ULT = new LatLng(10.0987676,-83.5040338);
     private final LatLng ULT2 = new LatLng(10.102196,-83.5059651);
     private final LatLng ULT3 = new LatLng(10.0974895,-83.5048886);
-    private final LatLng ULT4 = new LatLng(10.0974895,-83.5048886);
-    private final LatLng ULT5 = new LatLng(10.0974895,-83.5048886);
-    private final LatLng ULT6 = new LatLng(10.0974895,-83.5048886);
-    private final LatLng ULT7 = new LatLng(10.0974895,-83.5048886);
-    private final LatLng ULT8 = new LatLng(10.0974895,-83.5048886);
-    private final LatLng ULT9 = new LatLng(10.0974895,-83.5048886);
-    private final LatLng ULT10 = new LatLng(10.0974895,-83.5048886);
-    private final LatLng ULT11= new LatLng(10.0974895,-83.5048886);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,9 +50,13 @@ public class Canchas extends FragmentActivity {
 
         // Referenciamos el boton "Buscar" del Layout fm_pg_canchas
         Button btn_find = (Button) findViewById(R.id.btn_find);
+
+
         //Mi LOCALIZACION
         mapa.setMyLocationEnabled(true);
         myLocation();
+
+
         //Crear los marks
         crearMarks();
 
@@ -162,6 +158,7 @@ public class Canchas extends FragmentActivity {
 
     public void myLocation(){
         mapa.setOnMyLocationChangeListener(new GoogleMap.OnMyLocationChangeListener() {
+            MarkerOptions localization = new MarkerOptions();
             @Override
             public void onMyLocationChange(Location arg0) {
                 localization.position(new LatLng(arg0.getLatitude(), arg0.getLongitude())).title("¡Aquí Estoy!")
