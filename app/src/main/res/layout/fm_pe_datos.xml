@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="La vecindad del chavo"
+            android:text="Nombre Equipo"
             android:id="@+id/txt_nombre_datos"
             android:layout_centerHorizontal="true"
             android:gravity="center"
@@ -73,7 +73,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="1234567"
+                        android:text="325"
                         android:id="@+id/txt_doles_datos"
                         android:layout_weight="1"
                         android:gravity="center|right"
@@ -108,7 +108,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="1234567"
+                        android:text="7490"
                         android:id="@+id/txt_pts_datos"
                         android:layout_weight="1"
                         android:gravity="center|right"
@@ -142,7 +142,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="1234567"
+                        android:text="7"
                         android:id="@+id/txt_ranked_datos"
                         android:layout_weight="1"
                         android:gravity="center|right"
@@ -189,12 +189,13 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="1234567"
+            android:text="87"
             android:id="@+id/txt_victorias_datos"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:gravity="left|center_vertical"
-            android:textColor="#ffececec" />
+            android:textColor="#ffececec"
+            android:layout_marginLeft="4dp" />
 
         <TextView
             android:layout_width="0dp"
@@ -212,12 +213,13 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="1234567"
+            android:text="25"
             android:id="@+id/txt_derrotas_datos"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:gravity="left|center_vertical"
-            android:textColor="#ffececec" />
+            android:textColor="#ffececec"
+            android:layout_marginLeft="4dp" />
     </LinearLayout>
 
     <RelativeLayout
@@ -252,7 +254,8 @@
             android:background="#ff004863"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:text="Descripcion" />
+            android:text="Descripcion"
+            android:gravity="top" />
 
     </RelativeLayout>
 
@@ -278,7 +281,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Luis Solano Mendez"
+            android:text="Nombre Lider del equipo"
             android:id="@+id/txt_lider_datos"
             android:layout_weight="1"
             android:layout_marginTop="2dp"

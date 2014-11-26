@@ -1,16 +1,11 @@
 package com.elpoeta.menulateralslide.MenuLateral;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.elpoeta.menulateralslide.AdaptadorListas.Historial_Adaptador_LV;
-import com.elpoeta.menulateralslide.AdaptadorListas.Miembros_Adaptador_LV;
 import com.elpoeta.menulateralslide.R;
 
 /**

@@ -6,10 +6,8 @@
     <item android:state_pressed="true" android:state_enabled="true" >
         <shape android:shape="rectangle">
             <gradient
-                android:startColor="#79000000"
-                android:endColor="#34000000"
-                android:angle="90"
-                android:type="linear"
+                android:startColor="#ffe8e8e8"
+                android:endColor="#ffe8e8e8"
                 />
         </shape>
     </item>
@@ -18,10 +16,8 @@
     <item>
         <shape android:shape="rectangle">
             <gradient
-                android:startColor="#13000000"
-                android:endColor="#96000000"
-                android:angle="90"
-                android:type="linear"
+                android:startColor="#fff4f4f4"
+                android:endColor="#fff4f4f4"
                 />
         </shape>
     </item>

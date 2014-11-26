@@ -19,17 +19,18 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.28">
+            android:layout_weight="0.28"
+            android:weightSum="1">
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="BUSCAR RETO"
-                android:id="@+id/button"
+                android:id="@+id/btn_retar_equipo_manual"
                 android:background="@drawable/estilo_btn_buscar_reto"
-                android:textSize="30dp"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold" />
+                android:textSize="35dp"
+                android:textColor="#fff3f3f3"
+                android:textStyle="bold"
+                android:text="BUSCAR RETO" />
         </LinearLayout>
 
         <LinearLayout
