@@ -71,6 +71,17 @@ public class MyActivity extends Activity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.list_slidermenu);
 
+        /*****************************Header y Footer**********************************/
+        View header = getLayoutInflater().inflate(R.layout.lv_estilo_header, null);
+        mDrawerList.addHeaderView(header);
+
+        /*
+        View footer = getLayoutInflater().inflate(R.layout.lv_estilo_header, null);
+        mDrawerList.addFooterView(footer);
+        */
+
+        /*****************************Header y Footer**********************************/
+
         navDrawerItems = new ArrayList<NavDrawerItem>();
 
         // agregar un nuevo item al menu deslizante
@@ -116,8 +127,10 @@ public class MyActivity extends Activity {
 
         if (savedInstanceState == null) {
             // on first time display view for first nav item
-            displayView(0);
+            displayView(1);
         }
+
+
     }
 
 
@@ -155,25 +168,25 @@ public class MyActivity extends Activity {
         Fragment fragment = null;
 
         switch (position) {
-            case 0:
+            case 1:
                 fragment = new PaginaPrincipal();
                 break;
-            case 1:
+            case 2:
                 Intent intent = new Intent(getApplicationContext(), PerfilEquipo.class);
                 startActivity(intent);
                 break;
-            case 2:
+            case 3:
                 Intent intent1 = new Intent(getApplicationContext(), Disponibilidad.class);
                 startActivity(intent1);
                 break;
-            case 3:
+            case 4:
                 fragment = new Calendario();
                 break;
-            case 4:
+            case 5:
                 Intent intent3 = new Intent(getApplicationContext(), Historial.class);
                 startActivity(intent3);
                 break;
-            case 5:
+            case 6:
                 fragment = new Resenas();
                 break;
 

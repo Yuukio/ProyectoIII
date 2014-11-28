@@ -3,7 +3,13 @@
     tools:context="com.elpoeta.menulateralslide.MenuLateral.PerfilEquipo" >
 
     <item android:id="@+id/miembro_equipo"
-        android:icon="@drawable/com_facebook_profile_default_icon"
+        android:icon="@drawable/usuario_facebook"
         android:showAsAction="ifRoom"
         android:title="Invitar amigos" />
+
+    <item android:id="@+id/miembro_equipo"
+        android:icon="@drawable/common_signin_btn_icon_normal_light"
+        android:showAsAction="ifRoom"
+        android:title="Editar información" />
+
 </menu>

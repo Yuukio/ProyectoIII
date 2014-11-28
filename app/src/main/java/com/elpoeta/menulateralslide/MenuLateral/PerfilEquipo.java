@@ -74,7 +74,7 @@ public class PerfilEquipo extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu items for use in the action bar
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.equipos, menu);
+        inflater.inflate(R.menu.perfil_equipo, menu);
         return super.onCreateOptionsMenu(menu);
     }
 

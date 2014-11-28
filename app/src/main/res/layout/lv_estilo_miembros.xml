@@ -51,7 +51,8 @@
         android:layout_alignParentEnd="true"
         android:textSize="10dp"
         android:layout_alignBottom="@+id/thumbnail"
-        android:layout_below="@+id/txt_nombre" />
+        android:layout_below="@+id/txt_nombre"
+        android:gravity="center_vertical|center_horizontal" />
 
     <!-- titulo de la categoria -->
 
