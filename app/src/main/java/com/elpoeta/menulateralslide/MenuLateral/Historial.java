@@ -1,8 +1,10 @@
 package com.elpoeta.menulateralslide.MenuLateral;
 
+import android.app.Fragment;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.elpoeta.menulateralslide.AdaptadorListas.Historial_Adaptador_LV;
@@ -11,7 +13,7 @@ import com.elpoeta.menulateralslide.R;
 /**
  * Created by user on 26/08/2014.
  */
-public class Historial extends ActionBarActivity {
+public class Historial extends Fragment {
 
     Historial_Adaptador_LV adapter;
 
@@ -100,18 +102,22 @@ public class Historial extends ActionBarActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fm_ml_historial);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
-        final ListView lista = (ListView) findViewById(R.id.lista_historial);
-        adapter = new Historial_Adaptador_LV(this, ganador, imagenes1, imagenes2, listGF, listGC, listPts);
+        View rootView = inflater.inflate(R.layout.fm_ml_historial, container, false);
+
+        final ListView lista = (ListView) rootView.findViewById(R.id.lista_historial);
+        adapter = new Historial_Adaptador_LV(rootView.getContext(), ganador, imagenes1, imagenes2, listGF, listGC, listPts);
         lista.setAdapter(adapter);
 
+        /*
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        /**INDICAR TITULO Y SUBTITULO**/
+        /**INDICAR TITULO Y SUBTITULO**
         actionBar.setTitle("Historial");
+        */
+        return rootView;
     }
 }

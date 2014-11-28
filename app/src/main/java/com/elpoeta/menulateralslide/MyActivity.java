@@ -176,15 +176,17 @@ public class MyActivity extends Activity {
                 startActivity(intent);
                 break;
             case 3:
+                /*
                 Intent intent1 = new Intent(getApplicationContext(), Disponibilidad.class);
                 startActivity(intent1);
+                */
+                fragment = new Disponibilidad();
                 break;
             case 4:
                 fragment = new Calendario();
                 break;
             case 5:
-                Intent intent3 = new Intent(getApplicationContext(), Historial.class);
-                startActivity(intent3);
+                fragment = new Historial();
                 break;
             case 6:
                 fragment = new Resenas();

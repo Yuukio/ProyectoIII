@@ -109,10 +109,11 @@
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.3">
+            android:layout_weight="0.305"
+            android:layout_gravity="bottom">
 
         </LinearLayout>
 

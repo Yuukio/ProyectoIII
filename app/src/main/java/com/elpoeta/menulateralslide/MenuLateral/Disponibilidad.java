@@ -1,11 +1,7 @@
 package com.elpoeta.menulateralslide.MenuLateral;
 
-import android.app.Activity;
 import android.app.Fragment;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,23 +9,25 @@ import android.widget.TabHost;
 
 import com.elpoeta.menulateralslide.R;
 
-public class Disponibilidad extends ActionBarActivity{
+public class Disponibilidad extends Fragment{
 
     TabHost tabHost;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fm_ml_disponibilidad);
+        View rootView = inflater.inflate(R.layout.fm_ml_disponibilidad, container, false);
 
+        /*
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        /**INDICAR TITULO Y SUBTITULO**/
+        **INDICAR TITULO Y SUBTITULO**
         actionBar.setTitle("Disponibilidad");
+        */
 
-        tabHost = (TabHost) findViewById(R.id.th);
+        tabHost = (TabHost) rootView.findViewById(R.id.th);
         tabHost.setup();
 
         TabHost.TabSpec spec = tabHost.newTabSpec("tag1"); //creamos la variable para agregar un tab
@@ -69,6 +67,6 @@ public class Disponibilidad extends ActionBarActivity{
         spec.setContent(R.id.s);
         tabHost.addTab(spec);
 
-
+        return rootView;
     }
 }

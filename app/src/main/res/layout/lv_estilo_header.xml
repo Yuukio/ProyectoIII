@@ -4,15 +4,12 @@
     android:layout_height="wrap_content"
     android:background="#ff004863">
 
-    <ImageView
-        android:id="@+id/ima_perfil"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@drawable/com_facebook_profile_default_icon"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="15dp" />
+    <com.facebook.widget.ProfilePictureView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/view"
+        android:layout_margin="15dp">
+    </com.facebook.widget.ProfilePictureView>
 
     <TextView
         android:id="@+id/title"
@@ -23,9 +20,9 @@
         android:textColor="@color/list_item_title"
         android:gravity="center_vertical"
         android:text="Luis Solano Mendez"
-        android:layout_toEndOf="@+id/ima_perfil"
-        android:layout_alignTop="@+id/ima_perfil"
-        android:layout_toRightOf="@+id/ima_perfil" />
+        android:layout_toEndOf="@+id/view"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/view" />
 
     <CheckBox
         android:layout_width="wrap_content"
