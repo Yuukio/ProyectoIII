@@ -39,5 +39,24 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_s__settings">S_Settings</string>
     <string name="title_activity_login">LoginActivity</string>
+    
+    <string-array name="listaSanJose">
+        <item>San José</item>
+        <item>Escazú</item>
+        <item>Desamparados</item>
+        <item>Puriscal</item>
+        <item>Tarrazú</item>
+        <item>Aserrí</item>
+        <item>Mora</item>
+        <item>Goicoechea</item>
+        <item>Santa Ana</item>
+        <item>Alajuelita</item>
+        <item>Vázquez de Coronado</item>
+        <item>Acosta</item>
+        <item>Tibás</item>
+        <item>Moravia</item>
+        <item>Montes de Oca</item>
+        <item>Turrubares</item>
+    </string-array>
 
 </resources>

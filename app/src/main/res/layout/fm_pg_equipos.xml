@@ -13,8 +13,14 @@
 
         <Spinner
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/lista_provincias"
+            android:layout_weight="0.50" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lista_cantones"
             android:layout_weight="0.50" />
 
     </LinearLayout>
@@ -23,6 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/lista_equipos"
-        android:divider="#ffe0e0e0"/>
+        android:divider="#ffe0e0e0"
+        android:layout_weight="1" />
 
 </LinearLayout>
