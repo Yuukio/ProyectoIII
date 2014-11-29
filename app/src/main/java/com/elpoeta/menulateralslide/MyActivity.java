@@ -27,7 +27,7 @@ import com.elpoeta.menulateralslide.MenuLateral.Calendario;
 import com.elpoeta.menulateralslide.MenuLateral.Disponibilidad;
 import com.elpoeta.menulateralslide.MenuLateral.Historial;
 import com.elpoeta.menulateralslide.MenuLateral.PaginaPrincipal;
-import com.elpoeta.menulateralslide.MenuLateral.PerfilEquipo;
+import com.elpoeta.menulateralslide.MenuLateral.PerfilEquipo2;
 import com.elpoeta.menulateralslide.MenuLateral.Resenas;
 import com.elpoeta.menulateralslide.MenuPersonalizado.NavDrawerItem;
 import com.elpoeta.menulateralslide.MenuPersonalizado.NavDrawerListAdapter;
@@ -172,7 +172,7 @@ public class MyActivity extends Activity {
                 fragment = new PaginaPrincipal();
                 break;
             case 2:
-                Intent intent = new Intent(getApplicationContext(), PerfilEquipo.class);
+                Intent intent = new Intent(getApplicationContext(), PerfilEquipo2.class);
                 startActivity(intent);
                 break;
             case 3:
