@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:choiceMode="singleChoice"
-        android:dividerHeight="1dp"
         android:listSelector="@drawable/estilo_completo_item_lista"
         android:background="#07000000"/>
+
 </android.support.v4.widget.DrawerLayout>

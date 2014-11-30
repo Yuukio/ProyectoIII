@@ -86,10 +86,9 @@ public class MyActivity extends FragmentActivity {
         View header = getLayoutInflater().inflate(R.layout.lv_estilo_header, null);
         mDrawerList.addHeaderView(header);
 
-        /*
-        View footer = getLayoutInflater().inflate(R.layout.lv_estilo_header, null);
+        View footer = getLayoutInflater().inflate(R.layout.lv_estilo_footer, null);
         mDrawerList.addFooterView(footer);
-        */
+
 
         /*****************************Header y Footer**********************************/
 
