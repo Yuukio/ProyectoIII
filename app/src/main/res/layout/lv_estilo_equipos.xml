@@ -6,8 +6,9 @@
     android:id="@+id/layout1">
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff">
 
         <LinearLayout
             android:orientation="vertical"
@@ -76,7 +77,8 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_weight="1"
                         android:gravity="center_horizontal|bottom"
-                        android:textColor="#ff434343" />
+                        android:textColor="#ff434343"
+                        android:textStyle="bold"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -115,10 +117,4 @@
         </LinearLayout>
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:id="@+id/textView"
-        android:background="#7a00384b"
-        android:layout_marginBottom="6dp" />
 </LinearLayout>
