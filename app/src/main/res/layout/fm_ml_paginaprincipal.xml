@@ -115,6 +115,12 @@
             android:layout_weight="0.305"
             android:layout_gravity="bottom">
 
+            <!--
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_biodata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            -->
         </LinearLayout>
 
         <LinearLayout

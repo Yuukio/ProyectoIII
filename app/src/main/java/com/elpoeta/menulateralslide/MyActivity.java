@@ -1,6 +1,5 @@
 package com.elpoeta.menulateralslide;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -11,6 +10,7 @@ import android.content.res.TypedArray;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -36,7 +36,7 @@ import com.elpoeta.menulateralslide.Settings.S_Configuracion;
 import java.util.ArrayList;
 
 
-public class MyActivity extends Activity {
+public class MyActivity extends FragmentActivity {
 
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
@@ -54,6 +54,17 @@ public class MyActivity extends Activity {
 
     private ArrayList<NavDrawerItem> navDrawerItems;
     private NavDrawerListAdapter adapter;
+
+    /*
+    ViewPager vp;
+    private List<Fragment> getFragments(){
+        List<Fragment> listF = new ArrayList<Fragment>();
+        listF.add(ModelFragment.newInstance(R.drawable.ima2));
+        listF.add(ModelFragment.newInstance(R.drawable.ima3));
+        listF.add(ModelFragment.newInstance(R.drawable.ima4));
+        return listF;
+    }
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,6 +142,13 @@ public class MyActivity extends Activity {
         }
 
 
+        /******************************/
+
+        /*
+        vp = (ViewPager)findViewById(R.id.vp_biodata);
+        ControllerFragment cf = new ControllerFragment(getSupportFragmentManager(), getFragments());
+        vp.setAdapter(cf);
+        */
     }
 
 
