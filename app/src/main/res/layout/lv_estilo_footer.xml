@@ -11,45 +11,70 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="48dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="    OTROS ENLACES"
                 android:id="@+id/textView"
                 android:gravity="center_vertical"
-                android:textColor="#fff5f5f5"
+                android:textColor="#ff737373"
                 android:textStyle="bold"
-                android:background="#96000000"/>
+                android:background="#96000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp">
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/textView2"
+                android:layout_weight="1"
+                android:background="#96000000" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/textView2"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:background="#ffafafaf" />
+                android:text="Small Text"
+                android:id="@+id/textView13"
+                android:layout_weight="1"
+                android:background="#ff737373" />
+
+            <TextView
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/textView14"
+                android:layout_weight="1"
+                android:background="#96000000" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:id="@+id/linearLayout">
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="        Configuración"
-                android:id="@+id/textView3"
+                android:id="@+id/btn_configuracion"
                 android:gravity="center_vertical"
-                android:textColor="#fff5f5f5"
-                android:background="@drawable/estilo_completo_item_lista"/>
+                android:textColor="#ff737373"
+                android:background="@drawable/estilo_btn_menu_footer"
+                android:textSize="15dp" />
 
         </LinearLayout>
 
@@ -62,19 +87,20 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:id="@+id/linearLayout2" >
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="        Sugerir cambios"
-                android:id="@+id/textView5"
+                android:id="@+id/btn_sugerir"
                 android:gravity="center_vertical"
-                android:textColor="#fff5f5f5"
-                android:background="@drawable/estilo_completo_item_lista"/>
+                android:textColor="#ff737373"
+                android:background="@drawable/estilo_btn_menu_footer"
+                android:textSize="15dp" />
 
         </LinearLayout>
 
@@ -87,19 +113,20 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:id="@+id/linearLayout3" >
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="        Recomendarnos"
-                android:id="@+id/textView7"
+                android:id="@+id/btn_recomendarnos"
                 android:gravity="center_vertical"
-                android:textColor="#fff5f5f5"
-                android:background="@drawable/estilo_completo_item_lista"/>
+                android:textColor="#ff737373"
+                android:background="@drawable/estilo_btn_menu_footer"
+                android:textSize="15dp" />
 
         </LinearLayout>
 
@@ -112,43 +139,46 @@
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:id="@+id/linearLayout4" >
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="        Valorar aplicación"
-                android:id="@+id/textView9"
+                android:id="@+id/btn_valorar"
                 android:gravity="center_vertical"
-                android:textColor="#fff5f5f5"
-                android:background="@drawable/estilo_completo_item_lista"/>
+                android:textColor="#ff737373"
+                android:background="@drawable/estilo_btn_menu_footer"
+                android:textSize="15dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/textView10"
-                android:background="#00ffffff" />
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textView10"
+            android:background="#00ffffff" />
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
             android:id="@+id/linearLayout5" >
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="        Ayuda"
-                android:id="@+id/textView11"
+                android:id="@+id/btn_ayuda"
                 android:gravity="center_vertical"
-                android:textColor="#fff5f5f5"
-                android:background="@drawable/estilo_completo_item_lista"/>
+                android:textColor="#ff737373"
+                android:background="@drawable/estilo_btn_menu_footer"
+                android:textSize="15dp" />
 
         </LinearLayout>
     </LinearLayout>

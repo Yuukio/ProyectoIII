@@ -28,7 +28,6 @@ import com.elpoeta.menulateralslide.MenuLateral.Disponibilidad;
 import com.elpoeta.menulateralslide.MenuLateral.Historial;
 import com.elpoeta.menulateralslide.MenuLateral.PaginaPrincipal;
 import com.elpoeta.menulateralslide.MenuLateral.PerfilEquipo;
-import com.elpoeta.menulateralslide.MenuLateral.Resenas;
 import com.elpoeta.menulateralslide.MenuPersonalizado.NavDrawerItem;
 import com.elpoeta.menulateralslide.MenuPersonalizado.NavDrawerListAdapter;
 import com.elpoeta.menulateralslide.Settings.S_Configuracion;
@@ -83,12 +82,11 @@ public class MyActivity extends FragmentActivity {
         mDrawerList = (ListView) findViewById(R.id.list_slidermenu);
 
         /*****************************Header y Footer**********************************/
-        View header = getLayoutInflater().inflate(R.layout.lv_estilo_header, null);
-        mDrawerList.addHeaderView(header);
-
         View footer = getLayoutInflater().inflate(R.layout.lv_estilo_footer, null);
         mDrawerList.addFooterView(footer);
 
+        View header = getLayoutInflater().inflate(R.layout.lv_estilo_header, null);
+        mDrawerList.addHeaderView(header);
 
         /*****************************Header y Footer**********************************/
 
@@ -100,8 +98,6 @@ public class MyActivity extends FragmentActivity {
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1)));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[6], navMenuIcons.getResourceId(6, -1)));
 
         // Recycle the typed array
         navMenuIcons.recycle();
@@ -148,6 +144,101 @@ public class MyActivity extends FragmentActivity {
         ControllerFragment cf = new ControllerFragment(getSupportFragmentManager(), getFragments());
         vp.setAdapter(cf);
         */
+
+        /*************************Programacion menu lateral footer*****************************/
+
+        Button btn1 = (Button) findViewById(R.id.btn_configuracion);
+        Button btn2 = (Button) findViewById(R.id.btn_sugerir);
+        Button btn3 = (Button) findViewById(R.id.btn_recomendarnos);
+        Button btn4 = (Button) findViewById(R.id.btn_valorar);
+        Button btn5 = (Button) findViewById(R.id.btn_ayuda);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent0 = new Intent(getApplicationContext(), S_Configuracion.class);
+                startActivity(intent0);
+            }
+        });
+
+        /*
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                LayoutInflater inflater = getLayoutInflater();
+
+                View dialoglayout = inflater.inflate(R.layout.s_sugerir_cambio, null);
+
+                final EditText etAsunto = (EditText) dialoglayout.findViewById(R.id.et_EmailAsunto);
+                final EditText etMensaje = (EditText) dialoglayout.findViewById(R.id.et_EmailMensaje);
+
+                Button btnEnviarMail = (Button) dialoglayout.findViewById(R.id.btnEnviarMail);
+                btnEnviarMail.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        String subject = etAsunto.getText().toString();
+                        String message = etMensaje.getText().toString();
+
+                        Intent email = new Intent(Intent.ACTION_SEND);
+                        email.putExtra(Intent.EXTRA_EMAIL, new String[] { "micorre@gmail.com"});
+                        email.putExtra(Intent.EXTRA_SUBJECT, subject);
+                        email.putExtra(Intent.EXTRA_TEXT, " mensaje " + message);
+
+                        // need this to prompts email client only
+                        email.setType("message/rfc822");
+                        startActivity(Intent.createChooser(email, "Seleciona un cliente de correo"));
+
+                    }
+                });
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+                builder.setView(dialoglayout);
+                builder.show();
+
+            }
+        });
+
+        */
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        /*
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getApplicationContext());
+                // Setting Dialog Message
+                alertDialog.setTitle("Valorar nuestra aplicacón");
+                alertDialog.setMessage("Tu comentario es muy importante, por favor VALORA nuestra aplicación o deja un comentario.");
+
+                alertDialog.setCancelable(true);
+                alertDialog.setPositiveButton("Valorar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int which) {
+
+                        final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                        try {
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + appPackageName)));
+                        } catch (android.content.ActivityNotFoundException anfe) {}
+                    }
+                });
+                alertDialog.show();
+            }
+        });
+        */
+
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
 
@@ -204,9 +295,6 @@ public class MyActivity extends FragmentActivity {
                 break;
             case 5:
                 fragment = new Historial();
-                break;
-            case 6:
-                fragment = new Resenas();
                 break;
 
             default:
@@ -318,8 +406,7 @@ public class MyActivity extends FragmentActivity {
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(MyActivity.this);
                 // Setting Dialog Message
                 alertDialog.setTitle("Valorar aplicacion");
-                alertDialog.setMessage("Tu comentario es muy importante , por favor VALORA " +
-                        "o deja un comentario.");
+                alertDialog.setMessage("Tu opinión es muy importante, por favor VALORA nuestra aplicación o deja un comentario.");
 
                 alertDialog.setCancelable(true);
                 alertDialog.setPositiveButton("Valorar", new DialogInterface.OnClickListener() {

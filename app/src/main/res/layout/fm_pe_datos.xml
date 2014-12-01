@@ -24,8 +24,8 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:layout_weight="0.5"
-            android:background="#ff004863"
-            android:textColor="#ffececec"
+            android:background="@color/azul_letra"
+            android:textColor="@color/fondo_pantallas"
             android:lines="2" />
 
     </LinearLayout>
@@ -76,9 +76,9 @@
                         android:text="325"
                         android:id="@+id/txt_doles_datos"
                         android:layout_weight="1"
-                        android:gravity="center|right"
+                        android:gravity="top|right"
                         android:layout_gravity="center_horizontal"
-                        android:textColor="#ff002c41" />
+                        android:textColor="@color/azul_letra" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -90,7 +90,7 @@
                         android:layout_weight="0.5"
                         android:gravity="bottom|left"
                         android:layout_marginLeft="8dp"
-                        android:textColor="#a8002c41" />
+                        android:textColor="@color/azul_letra" />
                 </TableRow>
             </TableLayout>
 
@@ -111,9 +111,9 @@
                         android:text="7490"
                         android:id="@+id/txt_pts_datos"
                         android:layout_weight="1"
-                        android:gravity="center|right"
+                        android:gravity="top|right"
                         android:layout_gravity="center_horizontal"
-                        android:textColor="#ff002c41" />
+                        android:textColor="@color/azul_letra" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -125,7 +125,7 @@
                         android:layout_weight="0.5"
                         android:gravity="bottom|left"
                         android:layout_marginLeft="8dp"
-                        android:textColor="#a8002c41"
+                        android:textColor="@color/azul_letra"
                         android:textStyle="bold"/>
                 </TableRow>
             </TableLayout>
@@ -145,9 +145,9 @@
                         android:text="7"
                         android:id="@+id/txt_ranked_datos"
                         android:layout_weight="1"
-                        android:gravity="center|right"
+                        android:gravity="top|right"
                         android:layout_gravity="center_horizontal"
-                        android:textColor="#ff002c41" />
+                        android:textColor="@color/azul_letra" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -159,7 +159,7 @@
                         android:layout_weight="0.5"
                         android:gravity="bottom|left"
                         android:layout_marginLeft="8dp"
-                        android:textColor="#a8002c41"
+                        android:textColor="@color/azul_letra"
                         android:textStyle="bold"/>
                 </TableRow>
 
@@ -171,7 +171,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:background="#ff004863">
+        android:background="@color/azul_letra">
 
         <TextView
             android:layout_width="0dp"
@@ -183,7 +183,7 @@
             android:layout_marginRight="4dp"
             android:layout_weight="1"
             android:gravity="center_vertical|right"
-            android:textColor="#ffececec" />
+            android:textColor="@color/fondo_pantallas" />
 
         <TextView
             android:layout_width="0dp"
@@ -194,7 +194,7 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:gravity="left|center_vertical"
-            android:textColor="#ffececec"
+            android:textColor="@color/fondo_pantallas"
             android:layout_marginLeft="4dp" />
 
         <TextView
@@ -207,7 +207,7 @@
             android:layout_marginRight="4dp"
             android:layout_weight="1"
             android:gravity="center_vertical|right"
-            android:textColor="#ffececec" />
+            android:textColor="@color/fondo_pantallas" />
 
         <TextView
             android:layout_width="0dp"
@@ -218,7 +218,7 @@
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
             android:gravity="left|center_vertical"
-            android:textColor="#ffececec"
+            android:textColor="@color/fondo_pantallas"
             android:layout_marginLeft="4dp" />
     </LinearLayout>
 
@@ -226,7 +226,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.84"
-        android:background="#ff004863"
+        android:background="@color/azul_letra"
         android:layout_marginTop="15dp"
         android:layout_gravity="center_horizontal">
 
@@ -249,8 +249,8 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:layout_margin="12dp"
-            android:background="#ff004863"
-            android:textColor="#fff4f4f4"
+            android:background="@color/azul_letra"
+            android:textColor="@color/fondo_pantallas"
             android:padding="8dp" />
 
     </RelativeLayout>
@@ -272,7 +272,7 @@
             android:layout_marginBottom="2dp"
             android:layout_marginLeft="15dp"
             android:textStyle="bold"
-            android:textColor="#ff002c41" />
+            android:textColor="@color/azul_letra" />
 
         <TextView
             android:layout_width="match_parent"
@@ -283,6 +283,6 @@
             android:layout_weight="1"
             android:layout_marginTop="2dp"
             android:layout_marginLeft="15dp"
-            android:textColor="#ff002c41" />
+            android:textColor="@color/azul_letra" />
     </LinearLayout>
 </LinearLayout>

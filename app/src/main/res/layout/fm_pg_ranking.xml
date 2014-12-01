@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:weightSum="1"
-        android:background="#ff003d54">
+        android:background="@color/azul_letra">
 
         <TableRow
             android:layout_width="fill_parent"
@@ -30,7 +30,7 @@
                     android:layout_weight="0.04"
                     android:textSize="20dp"
                     android:layout_marginLeft="6dp"
-                    android:textColor="#ff003d54" />
+                    android:textColor="@color/azul_letra" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -38,10 +38,10 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="-"
                     android:id="@+id/textView4"
-                    android:layout_weight="0.04"
-                    android:textSize="50dp"
-                    android:textColor="#ff003d54"
-                    android:gravity="center_vertical|center_horizontal" />
+                    android:layout_weight="0.05"
+                    android:textColor="@color/azul_letra"
+                    android:gravity="center"
+                    android:textSize="35dp" />
 
                 <LinearLayout android:id="@+id/thumbnail"
                     android:layout_width="50dp"
@@ -49,7 +49,7 @@
                     android:padding="2dp"
                     android:layout_alignParentLeft="true"
 
-                    android:background="#ff003d54"
+                    android:background="@color/azul_letra"
                     android:layout_weight="0"
                     android:layout_margin="8dp">
 
@@ -57,7 +57,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:id="@+id/ima_equipo_r"
-                        android:background="#ff003d54" />
+                        android:background="@color/azul_letra" />
 
                 </LinearLayout>
             </TableRow>
@@ -70,7 +70,7 @@
                 android:id="@+id/txt_equipos_r"
                 android:layout_weight="0.25"
                 android:gravity="center"
-                android:textColor="#ffffffff"
+                android:textColor="@color/fondo_pantallas"
                 android:textSize="16dp" />
 
             <TextView
@@ -81,7 +81,7 @@
                 android:id="@+id/txt_pts_r"
                 android:layout_weight="0.105"
                 android:gravity="center"
-                android:textColor="#ffffffff"
+                android:textColor="@color/fondo_pantallas"
                 android:textSize="16dp"
                 android:background="#ff005472" />
 

@@ -2,7 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:drawable="@drawable/ml_fondo_item_normal" android:state_activated="false"/>
-    <item android:drawable="@drawable/ml_fondo_item_presionado" android:state_pressed="true"/>
+    <!--item android:drawable="@drawable/ml_fondo_item_presionado" android:state_pressed="true"/-->
     <item android:drawable="@drawable/ml_fondo_item_presionado" android:state_activated="false"/>
 
 </selector>
