@@ -18,12 +18,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="    OTROS ENLACES"
+                android:text="      OTROS ENLACES"
                 android:id="@+id/textView"
                 android:gravity="center_vertical"
-                android:textColor="#ff737373"
+                android:textColor="#ff7d7d7d"
                 android:textStyle="bold"
-                android:background="#96000000" />
+                android:background="@drawable/estilo_btn_menu_footer" />
 
         </LinearLayout>
 
@@ -69,10 +69,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="        Configuración"
+                android:text="            Configuración"
                 android:id="@+id/btn_configuracion"
                 android:gravity="center_vertical"
-                android:textColor="#ff737373"
+                android:textColor="#ff7d7d7d"
                 android:background="@drawable/estilo_btn_menu_footer"
                 android:textSize="15dp" />
 
@@ -80,7 +80,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:id="@+id/textView4"
             android:background="#00ffffff" />
@@ -95,10 +95,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="        Sugerir cambios"
+                android:text="            Sugerir cambios"
                 android:id="@+id/btn_sugerir"
                 android:gravity="center_vertical"
-                android:textColor="#ff737373"
+                android:textColor="#ff7d7d7d"
                 android:background="@drawable/estilo_btn_menu_footer"
                 android:textSize="15dp" />
 
@@ -106,7 +106,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:id="@+id/textView6"
             android:background="#00ffffff" />
@@ -121,10 +121,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="        Recomendarnos"
+                android:text="            Recomendarnos"
                 android:id="@+id/btn_recomendarnos"
                 android:gravity="center_vertical"
-                android:textColor="#ff737373"
+                android:textColor="#ff7d7d7d"
                 android:background="@drawable/estilo_btn_menu_footer"
                 android:textSize="15dp" />
 
@@ -132,7 +132,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:id="@+id/textView8"
             android:background="#00ffffff" />
@@ -147,10 +147,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="        Valorar aplicación"
+                android:text="            Valorar aplicación"
                 android:id="@+id/btn_valorar"
                 android:gravity="center_vertical"
-                android:textColor="#ff737373"
+                android:textColor="#ff7d7d7d"
                 android:background="@drawable/estilo_btn_menu_footer"
                 android:textSize="15dp" />
 
@@ -158,7 +158,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:id="@+id/textView10"
             android:background="#00ffffff" />
@@ -173,13 +173,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="        Ayuda"
+                android:text="            Ayuda"
                 android:id="@+id/btn_ayuda"
                 android:gravity="center_vertical"
-                android:textColor="#ff737373"
+                android:textColor="#ff7d7d7d"
                 android:background="@drawable/estilo_btn_menu_footer"
                 android:textSize="15dp" />
 
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/textView3"
+            android:background="#00ffffff" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/spinner_configuracion"
+                style="@style/spinner_style"
+                android:theme="@style/AppTheme" />
+        </LinearLayout>
     </LinearLayout>
+
 </RelativeLayout>

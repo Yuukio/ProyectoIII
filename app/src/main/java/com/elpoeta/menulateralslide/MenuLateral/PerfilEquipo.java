@@ -7,11 +7,13 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 import com.elpoeta.menulateralslide.PerfilEquipoTaps.Datos;
 import com.elpoeta.menulateralslide.PerfilEquipoTaps.Favoritos;
@@ -23,6 +25,8 @@ import com.elpoeta.menulateralslide.Settings.S_Configuracion;
 public class PerfilEquipo extends ActionBarActivity implements ActionBar.TabListener, ViewPager.OnPageChangeListener {
 
     private ViewPager mViewPager;;
+    private DrawerLayout mDrawerLayout;
+    private ListView mDrawerList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +114,18 @@ public class PerfilEquipo extends ActionBarActivity implements ActionBar.TabList
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
 
     }
+
+    /*
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu items for use in the action bar
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.perfil_equipo, menu);
+        return super.onCreateOptionsMenu(menu);
+
+
+    }
+    */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

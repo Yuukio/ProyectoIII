@@ -26,13 +26,26 @@
 
     </LinearLayout>
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/lista_equipos"
-        android:layout_weight="1"
-        android:dividerHeight="10dp"
-        android:divider="@color/fondo_pantallas"
-        android:layout_margin="10dp" />
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lista_equipos"
+            android:layout_weight="1"
+            android:dividerHeight="10dp"
+            android:divider="@color/fondo_pantallas"
+            android:layout_margin="10dp" />
+
+        <fragment
+            android:name="com.elpoeta.menulateralslide.PaginaPrincipal.Equipo_Horario"
+            android:id="@+id/fragmento_horario"
+            android:layout_width="320dp"
+            android:layout_height="266dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_margin="40dp" />
+    </FrameLayout>
 
 </LinearLayout>

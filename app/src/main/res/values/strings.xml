@@ -11,6 +11,7 @@
     <!-- Nombres de los items -->
     <string-array name="lista_nombre_layouts">
         <item>FC-Sport</item>
+        <item>FC-Sport</item>
         <item>Perfil de equipo</item>
         <item>Disponibilidad</item>
         <item>Calendario</item>

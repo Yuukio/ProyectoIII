@@ -19,20 +19,25 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import com.elpoeta.menulateralslide.MenuLateral.Calendario;
 import com.elpoeta.menulateralslide.MenuLateral.Disponibilidad;
 import com.elpoeta.menulateralslide.MenuLateral.Historial;
 import com.elpoeta.menulateralslide.MenuLateral.PaginaPrincipal;
 import com.elpoeta.menulateralslide.MenuLateral.PerfilEquipo;
+import com.elpoeta.menulateralslide.MenuPersonalizado.CustomDrawerAdapter;
+import com.elpoeta.menulateralslide.MenuPersonalizado.DrawerItem;
 import com.elpoeta.menulateralslide.MenuPersonalizado.NavDrawerItem;
 import com.elpoeta.menulateralslide.MenuPersonalizado.NavDrawerListAdapter;
 import com.elpoeta.menulateralslide.Settings.S_Configuracion;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class MyActivity extends FragmentActivity {
@@ -54,6 +59,28 @@ public class MyActivity extends FragmentActivity {
     private ArrayList<NavDrawerItem> navDrawerItems;
     private NavDrawerListAdapter adapter;
 
+    /*****Menu lateral Notificaciones******/
+
+    private DrawerLayout mDrawerLayout2;
+    private ListView mDrawerList2;
+    private ActionBarDrawerToggle mDrawerToggle2;
+
+    private CharSequence mDrawerTitle2;
+    private CharSequence mTitle2;
+    CustomDrawerAdapter adapter2;
+
+    List<DrawerItem> dataList2;
+
+    Spinner listaConfiguracion;
+
+    String[] listaConfig = new String[]{
+            "Notificaciones",
+            "Políticas de privacidad",
+            "Acerca de FC-Sport",
+            "Cerrar sesión"
+    };
+
+    /**************************************/
     /*
     ViewPager vp;
     private List<Fragment> getFragments(){
@@ -93,11 +120,11 @@ public class MyActivity extends FragmentActivity {
         navDrawerItems = new ArrayList<NavDrawerItem>();
 
         // agregar un nuevo item al menu deslizante
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1)));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(0, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(1, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(2, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(3, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(4, -1)));
 
         // Recycle the typed array
         navMenuIcons.recycle();
@@ -126,6 +153,14 @@ public class MyActivity extends FragmentActivity {
             public void onDrawerOpened(View drawerView) {
                 getActionBar().setTitle(mDrawerTitle);
                 // calling onPrepareOptionsMenu() to hide action bar icons
+                getActionBar().setIcon(R.drawable.ic_launcher);
+
+                /**/
+
+                //getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#ff004863")));
+
+                /**/
+
                 invalidateOptionsMenu();
             }
         };
@@ -239,6 +274,37 @@ public class MyActivity extends FragmentActivity {
 
             }
         });
+
+        /***********************************Menu lateral Notifiaciones***********************************************************************/
+
+
+        /***********************************Spinner Configuracion***********************************************************************/
+
+
+
+        listaConfiguracion = (Spinner) findViewById(R.id.spinner_configuracion);
+
+
+        ArrayAdapter<String> adaptadorConfig = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, listaConfig);
+        listaConfiguracion.setAdapter(adaptadorConfig);
+
+
+
+
+        listaConfiguracion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i){
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
     }
 
 
@@ -251,6 +317,7 @@ public class MyActivity extends FragmentActivity {
             displayView(position);
         }
     }
+
 
 
 
@@ -429,5 +496,7 @@ public class MyActivity extends FragmentActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    /***********************************Menu lateral Notificaciones***********************************************************/
 
 }

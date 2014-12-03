@@ -40,17 +40,16 @@
             <LinearLayout android:id="@+id/thumbnail"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:padding="2dp"
                 android:layout_alignParentLeft="true"
-
                 android:background="#ffc0c0c0"
                 android:layout_weight="0"
                 android:layout_margin="8dp">
 
-                <ImageView
+                <ImageButton
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/ima_equipo_r" />
+                    android:id="@+id/ima_equipo_r"
+                    android:background="#ffc0c0c0"/>
 
         </LinearLayout>
         </TableRow>

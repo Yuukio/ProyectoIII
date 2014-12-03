@@ -4,12 +4,18 @@
 
     <item android:id="@+id/miembro_equipo"
         android:icon="@drawable/usuario_facebook"
-        android:showAsAction="ifRoom"
+        android:showAsAction="always"
         android:title="Invitar amigos" />
 
-    <item android:id="@+id/miembro_equipo"
+    <item android:id="@+id/editar_equipo"
         android:icon="@drawable/common_signin_btn_icon_normal_light"
-        android:showAsAction="ifRoom"
+        android:showAsAction="always"
         android:title="Editar información" />
+
+    <item
+        android:id="@+id/refreshButton"
+        android:icon="@drawable/ic_action_navigation_refresh"
+        android:showAsAction="always"
+        android:title=""/>
 
 </menu>
