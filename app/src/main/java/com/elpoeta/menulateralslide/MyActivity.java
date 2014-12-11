@@ -25,6 +25,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import com.elpoeta.menulateralslide.FacebookClasses.FriendRequestFragment;
 import com.elpoeta.menulateralslide.MenuLateral.Calendario;
 import com.elpoeta.menulateralslide.MenuLateral.Disponibilidad;
 import com.elpoeta.menulateralslide.MenuLateral.Historial;
@@ -42,6 +43,7 @@ import java.util.List;
 
 public class MyActivity extends FragmentActivity {
 
+    FriendRequestFragment sendRequest;
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -236,13 +238,13 @@ public class MyActivity extends FragmentActivity {
         });
 
         */
-        btn3.setOnClickListener(new View.OnClickListener() {
+        /*btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
             }
         });
-
+*/
         /*
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -466,6 +468,11 @@ public class MyActivity extends FragmentActivity {
                 return true;
 
             case R.id.s_recomendarnos:
+                sendRequest = new FriendRequestFragment();
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .add(android.R.id.content, sendRequest)
+                        .commit();
                 return true;
 
             case R.id.s_valorar_app:

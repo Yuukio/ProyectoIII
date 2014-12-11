@@ -1,17 +1,12 @@
-package com.elpoeta.menulateralslide.loginFacebook;
+package com.elpoeta.menulateralslide.FacebookClasses;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-import com.elpoeta.menulateralslide.MyActivity;
 import com.elpoeta.menulateralslide.R;
 import com.facebook.AppEventsLogger;
-import com.facebook.widget.LoginButton;
 
 public class LoginActivity extends FragmentActivity {
 

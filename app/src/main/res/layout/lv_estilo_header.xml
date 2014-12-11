@@ -5,32 +5,24 @@
     android:background="@drawable/header_azul">
 
     <com.facebook.widget.ProfilePictureView
+        android:id="@+id/selection_profile_pic"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:id="@+id/view"
         android:layout_margin="15dp">
     </com.facebook.widget.ProfilePictureView>
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/selection_user_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?android:attr/listPreferredItemHeightSmall"
         android:textAppearance="?android:attr/textAppearanceListItemSmall"
         android:textColor="@color/list_item_title"
         android:gravity="center_vertical"
-        android:text="Luis Solano Mendez"
-        android:layout_toEndOf="@+id/view"
+        android:layout_toEndOf="@+id/profile_name"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/view" />
+        android:layout_toRightOf="@+id/profile_name" />
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:checked="false" />
+
 
 </RelativeLayout>

@@ -141,8 +141,6 @@ public class PerfilEquipo extends ActionBarActivity implements ActionBar.TabList
         switch (item.getItemId()) {
             case R.id.miembro_equipo:
 
-                /**********Programar aqui el metodo de agregar miembros de facebook**********/
-
 
 
                 Intent intent = new Intent(getApplicationContext(), S_Configuracion.class);
