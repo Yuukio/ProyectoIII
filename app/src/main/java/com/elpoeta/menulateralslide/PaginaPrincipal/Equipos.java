@@ -10,81 +10,79 @@ import android.widget.ListView;
 import android.widget.Spinner;
 
 import com.elpoeta.menulateralslide.AdaptadorListas.Equipos_Adaptador_LV;
+import com.elpoeta.menulateralslide.MenuLateral.PaginaPrincipal;
 import com.elpoeta.menulateralslide.R;
 
 
 public class Equipos extends ActionBarActivity{
 
     Equipos_Adaptador_LV adapter;
+    int i;
 
 
-    String[] listaNombreEquipos = new String[]{
-            "Los guerreros Z",
-            "Los Vengadores",
-            "La Vecindad del Chavo",
-            "Los Incautos",
-            "League of Legends",
-            "Somos un Equipo",
-            "El toque del Agel",
-            "Los mas Malitos"
-    };
+    String[] listaNombreEquipos() {
 
-    int[] listaImagenes = {
-            R.drawable.ic_launcher,
-            R.drawable.ic_launcher,
-            R.drawable.ic_launcher,
-            R.drawable.ic_launcher,
-            R.drawable.ic_launcher,
-            R.drawable.ic_launcher,
-            R.drawable.ic_launcher,
-            R.drawable.ic_launcher
-    };
+        String[] listaEquipos= new String[PaginaPrincipal.nombreEquipo.length];
+
+        for (i=0; i<listaEquipos.length; i++){
+
+            listaEquipos[i]=PaginaPrincipal.nombreEquipo[i];
+        }
+
+        return listaEquipos;
+    }
+
+    public int[] listaImagenes(){
+        int[] listaImagenes = new int[PaginaPrincipal.nombreEquipo.length];
+        for (i=0; i<listaImagenes.length; i++){
+            listaImagenes[i] = R.drawable.ic_launcher;
+        }
+        return listaImagenes;
+    }
 
     String[] listaNombreLider = new String[]{
-                "Hola Mundo",
-                "Luis Solano",
-                "Ermis Luna",
-                "Kenneth Aguilar",
-                "Sebastian Rey",
-                "Esteban Sanabria",
-                "Abel Pacheco",
-                "Keylor Navas"
+            "Hola Mundo",
+            "Luis Solano",
+            "Ermis Luna",
+            "Kenneth Aguilar",
+            "Sebastian Rey",
+            "Esteban Sanabria",
+            "Abel Pacheco",
+            "Keylor Navas",
+            "Ermis Luna",
+            "Kenneth Aguilar",
+            "Sebastian Rey",
+            "Esteban Sanabria",
+            "Abel Pacheco",
+            "Keylor Navas"
     };
 
-    Spinner listaProvincias;
-    Spinner listaCantones;
+    Spinner listaPais;
+    Spinner listaCiudad;
 
-    String[] listProv = {
-            "San José",
-            "Alajuela",
-            "Cartago",
-            "Guanacaste",
-            "Heredia",
-            "Limón",
-            "Puntarenas"
-    };
+    public String[] listPais() {
 
-    String[] listaCantonSanJose = {"San José", "Escazú", "Desamparados", "Puriscal", "Tarrazú",
-            "Aserrí", "Mora", "Goicoechea", "Santa Ana", "Alajuelita", "Vázquez de Coronado",
-            "Acosta", "Tibás", "Moravia", "Montes de Oca", "Turrubares"};
+        String[] listaEquiposPais= new String[PaginaPrincipal.paisEquipo.length];
 
-    String[] listaCantonAlajuela = {"Alajuela", "San Ramón", "Grecia", "San Mateo", "Atenas",
-            "Naranjo", "Palmares", "Poás", "Orotina", "San Carlos", "Zarcero", "Valverde Vega",
-            "Upala", "Los Chiles", "Guatuso"};
+        for (i=0; i<listaEquiposPais.length; i++){
 
-    String[] listaCantonHeredia = {"Heredia", "Barva", "Santo Domingo", "Santa Barbara",
-            "San Isidro", "Belén", "Flores", "San Pablo", "Sarapiquí"};
+            listaEquiposPais[i]=PaginaPrincipal.paisEquipo[i];
+        }
 
-    String[] listaCantonCartago = {"Cartago", "Paraíso", "La Unión", "Jiménez", "Turrialba",
-            "Alvarado", "Oreamuno", "El Guarco"};
+        return listaEquiposPais;
+    }
 
-    String[] listaCantonPuntarenas = {"Puntarenas", "Esparza", "Buenos Aires", "Montes de Oro",
-            "Osa", "Aguirre", "Golfito", "Coto Brus", "Parrita", "Corredores", "Garabito"};
+    public String[] listCiudad() {
 
-    String[] listaCantonGuanacaste = {"Liberia", "Nicoya", "Snta Cruz", "Bagaces", "Carrillo",
-            "Cañas", "Abangares", "Tilarán", "Nandayure", "La Cruz", "Hojancha"};
+        String[] listaEquiposCiudad= new String[PaginaPrincipal.ciudadEquipo.length];
 
-    String[] listaCantonLimon = {"Limón", "Pococí", "Siquirres", "Talamanca", "Matina", "Guácimo"};
+        for (i=0; i<listaEquiposCiudad.length; i++){
+
+            listaEquiposCiudad[i]= PaginaPrincipal.ciudadEquipo[i];
+        }
+
+        return listaEquiposCiudad;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +90,7 @@ public class Equipos extends ActionBarActivity{
         setContentView(R.layout.fm_pg_equipos);
 
         final ListView lista = (ListView) findViewById(R.id.lista_equipos);
-        adapter = new Equipos_Adaptador_LV(this, listaImagenes, listaNombreEquipos, listaNombreLider);
+        adapter = new Equipos_Adaptador_LV(this, listaImagenes(), listaNombreEquipos(), listaNombreLider);
         lista.setAdapter(adapter);
 
         ActionBar actionBar = getSupportActionBar();
@@ -102,129 +100,33 @@ public class Equipos extends ActionBarActivity{
         actionBar.setTitle("Equipos");
 
         /*****SPINNER*****/
-        listaProvincias = (Spinner) findViewById(R.id.lista_provincias);
+        listaPais = (Spinner) findViewById(R.id.lista_provincias);
 
 
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, listProv);
-        listaProvincias.setAdapter(adaptador);
+        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, listPais());
+        listaPais.setAdapter(adaptador);
 
 
 
-        listaProvincias.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        listaPais.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                switch (i){
 
-/***San Jose***/    case 0:
+                listaCiudad = (Spinner) findViewById(R.id.lista_cantones);
 
-                        listaCantones = (Spinner) findViewById(R.id.lista_cantones);
-                        ArrayAdapter<String> adaptador2 = new ArrayAdapter<String>(getBaseContext(), R.layout.support_simple_spinner_dropdown_item, listaCantonSanJose);
-                        listaCantones.setAdapter(adaptador2);
-                        listaCantones.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                            @Override
-                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                ArrayAdapter<String> adaptador2 = new ArrayAdapter<String>(getBaseContext(), R.layout.support_simple_spinner_dropdown_item, listCiudad());
+                listaCiudad.setAdapter(adaptador2);
+                listaCiudad.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-                                /*Switch de campos y metodos*/
-                            }
-                            @Override
-                            public void onNothingSelected(AdapterView<?> adapterView) {}});
-                        break;
+                        /*Switch de campos y metodos*/
+                    }
 
-/***Alajuela***/    case 1:
-
-                        listaCantones = (Spinner) findViewById(R.id.lista_cantones);
-                        ArrayAdapter<String> adaptador3 = new ArrayAdapter<String>(getBaseContext(), R.layout.support_simple_spinner_dropdown_item, listaCantonAlajuela);
-                        listaCantones.setAdapter(adaptador3);
-                        listaCantones.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                            @Override
-                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-                                /*Switch de campos y metodos*/
-                            }
-                            @Override
-                            public void onNothingSelected(AdapterView<?> adapterView) {}});
-
-                        break;
-/***Cartago***/     case 2:
-
-                        listaCantones = (Spinner) findViewById(R.id.lista_cantones);
-                        ArrayAdapter<String> adaptador4 = new ArrayAdapter<String>(getBaseContext(), R.layout.support_simple_spinner_dropdown_item, listaCantonCartago);
-                        listaCantones.setAdapter(adaptador4);
-                        listaCantones.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                            @Override
-                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-                                /*Switch de campos y metodos*/
-                            }
-                            @Override
-                            public void onNothingSelected(AdapterView<?> adapterView) {}});
-
-                        break;
-/***Guanacaste***/  case 3:
-
-                        listaCantones = (Spinner) findViewById(R.id.lista_cantones);
-                        ArrayAdapter<String> adaptador5 = new ArrayAdapter<String>(getBaseContext(), R.layout.support_simple_spinner_dropdown_item, listaCantonGuanacaste);
-                        listaCantones.setAdapter(adaptador5);
-                        listaCantones.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                            @Override
-                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-                                /*Switch de campos y metodos*/
-                            }
-                            @Override
-                            public void onNothingSelected(AdapterView<?> adapterView) {}});
-
-                        break;
-/***Heredia***/     case 4:
-
-                        listaCantones = (Spinner) findViewById(R.id.lista_cantones);
-                        ArrayAdapter<String> adaptador6 = new ArrayAdapter<String>(getBaseContext(), R.layout.support_simple_spinner_dropdown_item, listaCantonHeredia);
-                        listaCantones.setAdapter(adaptador6);
-                        listaCantones.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                            @Override
-                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-                                /*Switch de campos y metodos*/
-                            }
-                            @Override
-                            public void onNothingSelected(AdapterView<?> adapterView) {}});
-
-                        break;
-/***Limon***/       case 5:
-
-                        listaCantones = (Spinner) findViewById(R.id.lista_cantones);
-                        ArrayAdapter<String> adaptador7 = new ArrayAdapter<String>(getBaseContext(), R.layout.support_simple_spinner_dropdown_item, listaCantonLimon);
-                        listaCantones.setAdapter(adaptador7);
-                        listaCantones.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                            @Override
-                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-                                /*Switch de campos y metodos*/
-                            }
-                            @Override
-                            public void onNothingSelected(AdapterView<?> adapterView) {}});
-
-                        break;
-/***Puntarenas***/  case 6:
-
-                        listaCantones = (Spinner) findViewById(R.id.lista_cantones);
-                        ArrayAdapter<String> adaptador8 = new ArrayAdapter<String>(getBaseContext(), R.layout.support_simple_spinner_dropdown_item, listaCantonPuntarenas);
-                        listaCantones.setAdapter(adaptador8);
-                        listaCantones.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                            @Override
-                            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
-                                /*Switch de campos y metodos*/
-                            }
-                            @Override
-                            public void onNothingSelected(AdapterView<?> adapterView) {}});
-
-                        break;
-
-                    default:
-                        break;
-
-                }
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+                    }
+                });
             }
 
             @Override

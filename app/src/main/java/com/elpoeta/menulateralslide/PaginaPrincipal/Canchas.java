@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.elpoeta.menulateralslide.MenuLateral.PaginaPrincipal;
 import com.elpoeta.menulateralslide.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -33,9 +34,9 @@ public class Canchas extends FragmentActivity {
     MarkerOptions markerOptions;
 
 
-    private final LatLng ULT = new LatLng(10.0987676,-83.5040338);
-    private final LatLng ULT2 = new LatLng(10.102196,-83.5059651);
-    private final LatLng ULT3 = new LatLng(10.0974895,-83.5048886);
+    int i;
+    private LatLng ULT = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +77,6 @@ public class Canchas extends FragmentActivity {
 
         // Activando el boton "Buscar" para realizar la misma
         btn_find.setOnClickListener(findClickListener);
-
     }
 
     /*Metodos*/
@@ -127,33 +127,32 @@ public class Canchas extends FragmentActivity {
                 Toast.makeText(getBaseContext(), "Ocurrio un error", Toast.LENGTH_SHORT).show();
             }
         }
-
     }
 
     //ESTE METODO SE VA A ENCARGAR DE CREAR TODOS LOS MARKS DEL MAPA
 
     public void crearMarks(){
-        MarkerOptions marcador1 =  new MarkerOptions(); //Se crea el MARK
-        marcador1.position(ULT); //Para este campo creamos una nueva variable con Lat y Lon antes de entrar al <FOR> para crear el mark
-        marcador1.title("Caribeños");//Este campo se llena con <NOMBRE> de la base de datos
-        marcador1.snippet("Telefono: 2768-25-25");//Este campo se llena con <TELEFONO> de la base de datos
-        marcador1.anchor(0.5f, 0.5f);
-        mapa.addMarker(marcador1);
 
-        MarkerOptions marcador2 =  new MarkerOptions();
-        marcador2.position(ULT2);
-        marcador2.title("Iglesia Catolica");
-        marcador2.snippet("Telefono: 2768-26-26");
-        marcador2.anchor(0.5f, 0.5f);
-        mapa.addMarker(marcador2);
+        String[] nombCancha = new String[PaginaPrincipal.nombreCancha.length];
+        String[] telCancha = new String[PaginaPrincipal.telefonoCancha.length];
+        double[] latCancha = new double[PaginaPrincipal.latitudCancha.length];
+        double[] longCancha = new double[PaginaPrincipal.longitudCancha.length];
 
-        MarkerOptions marcador3 =  new MarkerOptions();
-        marcador3.position(ULT3);
-        marcador3.title("Plaza Central Siquirres");
-        marcador3.snippet("Telefono: 2768-45-45");
-        marcador3.anchor(0.5f, 0.5f);
-        mapa.addMarker(marcador3);
+        for (i=0; i<nombCancha.length; i++) {
+            nombCancha[i] = PaginaPrincipal.nombreCancha[i];
+            longCancha[i] = PaginaPrincipal.longitudCancha[i];
+            latCancha[i] = PaginaPrincipal.latitudCancha[i];
+            telCancha[i] = PaginaPrincipal.telefonoCancha[i];
 
+            ULT = new LatLng(latCancha[i],longCancha[i]);
+
+            MarkerOptions marcador1 =  new MarkerOptions();//Se crea el MARK
+            marcador1.position(ULT); //Para este campo creamos una nueva variable con Lat y Lon antes de entrar al <FOR> para crear el mark
+            marcador1.title(nombCancha[i]);//Este campo se llena con <NOMBRE> de la base de datos
+            marcador1.snippet(telCancha[i]);//Este campo se llena con <TELEFONO> de la base de datos
+            marcador1.anchor(0.5f, 0.5f);
+            mapa.addMarker(marcador1);
+        }
     }
 
     public void myLocation(){
@@ -165,10 +164,6 @@ public class Canchas extends FragmentActivity {
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
                 mapa.addMarker(localization);
             }
-
         });
-
-
     }
-
 }

@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.widget.ListView;
 
 import com.elpoeta.menulateralslide.AdaptadorListas.Ranking_Adaptador_LV;
+import com.elpoeta.menulateralslide.MenuLateral.PaginaPrincipal;
 import com.elpoeta.menulateralslide.R;
 
 
@@ -14,35 +15,48 @@ public class Ranking extends ActionBarActivity {
 
     Ranking_Adaptador_LV adapter;
 
+    int i;
 
+    public String[] ptsEquipo() {
+
+        String[] listPts_ranking = new String[PaginaPrincipal.puntosEquipo.length];
+        for (i=0; i<listPts_ranking.length; i++){
+            listPts_ranking[i] = PaginaPrincipal.puntosEquipo[i];
+        }
+        return listPts_ranking;
+    }
+
+    //Aquí lleno la lista con los objetos que recibo del web service...(No se está recibiendo nada)
     public String[] listEquipo() {
-        String[] listaEquipos = new String[]{
-                "Los guerreros Z",
-                "Los Vengadores",
-                "La Vecindad del Chavo",
-                "Los Incautos",
-                "League of Legends",
-                "Somos un Equipo",
-                "El toque del Agel",
-                "Los mas Malitos"
-        };
+
+        String[] listaEquipos= new String[PaginaPrincipal.nombreEquipo.length];
+
+        for (i=0; i<listaEquipos.length; i++){
+
+            listaEquipos[i]=PaginaPrincipal.nombreEquipo[i];
+        }
+
         return listaEquipos;
     }
 
-    int[] listaImagenes = {
-            R.drawable.ic_launcher,
-            R.drawable.ic_launcher,
-            R.drawable.ic_launcher,
-            R.drawable.ic_launcher,
-            R.drawable.ic_launcher,
-            R.drawable.ic_launcher,
-            R.drawable.ic_launcher,
-            R.drawable.ic_launcher
-    };
+    public int[] imagenEquipo(){
+        int[] listaImagenes = new int[PaginaPrincipal.nombreEquipo.length];
+        for (i=0; i<listaImagenes.length; i++){
+            listaImagenes[i] = R.drawable.ic_launcher;
+        }
+        return listaImagenes;
+    }
 
-    String[] listPts_ranking = {"327", "312", "291", "237", "129", "69", "51", "12"};
+    public String[] puestoEquipo(){
 
-    String[] listPuesto_ranking = {"1", "2", "3", "4", "5", "6", "7", "8"};
+        String[] listPuesto_ranking = new String[PaginaPrincipal.nombreEquipo.length];
+
+        for (i=0; i<listPuesto_ranking.length; i++)
+            listPuesto_ranking[i] = String.valueOf(i+1);
+
+        return listPuesto_ranking;
+
+    }
 
 
     @Override
@@ -50,8 +64,9 @@ public class Ranking extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fm_pg_ranking);
 
+
         final ListView lista = (ListView) findViewById(R.id.lista_ranking);
-        adapter = new Ranking_Adaptador_LV(this, listEquipo(), listaImagenes, listPts_ranking, listPuesto_ranking);
+        adapter = new Ranking_Adaptador_LV(this, listEquipo(), imagenEquipo(), ptsEquipo(), puestoEquipo());
         lista.setAdapter(adapter);
 
 
@@ -61,57 +76,5 @@ public class Ranking extends ActionBarActivity {
         /**INDICAR TITULO Y SUBTITULO**/
         actionBar.setTitle("Ranking");
     }
-
-    /**public class TareaWSListar extends AsyncTask<String,Integer,Boolean> {
-
-         Ranking r = new Ranking();
-         String[] clientes = r.listEquipo();
-
-         protected Boolean doInBackground(String... params) {
-
-             boolean resul = true;
-
-             HttpClient httpClient = new DefaultHttpClient();
-
-             HttpGet del =
-             new HttpGet("http://192.168.43.167:8080/Service/ws/equipo/ranking");
-
-             del.setHeader("content-type", "application/json");
-
-             try {
-                 HttpResponse resp = httpClient.execute(del);
-                 String respStr = EntityUtils.toString(resp.getEntity());
-
-                 JSONArray respJSON = new JSONArray(respStr);
-
-                 clientes = new String[respJSON.length()];
-
-                 for (int i = 0; i < respJSON.length(); i++) {
-                 JSONObject obj = respJSON.getJSONObject(i);
-
-                 String nombCli = obj.getString("nombre");
-
-                 clientes[i] = nombCli;
-             }
-             } catch (Exception ex) {
-                 Log.e("ServicioRest", "Error!", ex);
-                 resul = false;
-             }
-
-         return resul;
-         }
-
-     protected void onPostExecute(Boolean result) {
-
-         if (result) {
-             //Rellenamos la lista con los nombres de los clientes
-             //Rellenamos la lista con los resultados
-             ArrayAdapter<String> adaptador =
-             new ArrayAdapter<String>(Ranking.this,
-             android.R.layout.simple_list_item_1, clientes);
-         }
-     }
-
-     }**/
 
 }
