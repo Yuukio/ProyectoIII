@@ -10,4 +10,12 @@
     <color name="azul_letra">#ff004863</color>
     <color name="fondo_pantallas">#ffe0e0e0</color>
     <!--#ff004863-->
+
+    <color name="white">#FFF</color>
+    <color name="l_blue">#909BAA</color>
+    <color name="d_blue">#6D7B92</color>
+    <color name="gray">#515151</color>
+    <color name="d_gray">#666</color>
+    <color name="black">#222326</color>
+
 </resources>

@@ -50,7 +50,6 @@ public class Ranking extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fm_pg_ranking);
 
-
         final ListView lista = (ListView) findViewById(R.id.lista_ranking);
         adapter = new Ranking_Adaptador_LV(this, listEquipo(), listaImagenes, listPts_ranking, listPuesto_ranking);
         lista.setAdapter(adapter);

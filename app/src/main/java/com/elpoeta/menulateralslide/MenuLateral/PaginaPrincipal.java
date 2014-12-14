@@ -10,13 +10,16 @@ import android.widget.Button;
 
 import com.elpoeta.menulateralslide.PaginaPrincipal.Canchas;
 import com.elpoeta.menulateralslide.PaginaPrincipal.Equipos;
+import com.elpoeta.menulateralslide.PaginaPrincipal.Publicidad;
 import com.elpoeta.menulateralslide.PaginaPrincipal.Ranking;
 import com.elpoeta.menulateralslide.R;
 
 /**
  * Created by Luis on 19/10/14.
  */
-public class PaginaPrincipal extends Fragment {
+public class PaginaPrincipal extends Fragment{
+
+    Publicidad p = new Publicidad();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -54,6 +57,7 @@ public class PaginaPrincipal extends Fragment {
             });
 
         }
+
         return rootView;
     }
 }

@@ -19,7 +19,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -282,31 +281,6 @@ public class MyActivity extends FragmentActivity {
 
         /***********************************Spinner Configuracion***********************************************************************/
 
-
-
-        listaConfiguracion = (Spinner) findViewById(R.id.spinner_configuracion);
-
-
-        ArrayAdapter<String> adaptadorConfig = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, listaConfig);
-        listaConfiguracion.setAdapter(adaptadorConfig);
-
-
-
-
-        listaConfiguracion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                switch (i){
-
-                }
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-
     }
 
 
@@ -353,17 +327,17 @@ public class MyActivity extends FragmentActivity {
                 startActivity(intent);
                 break;
             case 3:
-                /*
+
                 Intent intent1 = new Intent(getApplicationContext(), Disponibilidad.class);
                 startActivity(intent1);
-                */
-                fragment = new Disponibilidad();
+
                 break;
             case 4:
                 fragment = new Calendario();
                 break;
             case 5:
-                fragment = new Historial();
+                Intent intent2 = new Intent(getApplicationContext(), Historial.class);
+                startActivity(intent2);
                 break;
 
             default:

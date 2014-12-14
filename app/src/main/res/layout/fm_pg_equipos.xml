@@ -38,14 +38,6 @@
             android:dividerHeight="10dp"
             android:divider="@color/fondo_pantallas"
             android:layout_margin="10dp" />
-
-        <fragment
-            android:name="com.elpoeta.menulateralslide.PaginaPrincipal.Equipo_Horario"
-            android:id="@+id/fragmento_horario"
-            android:layout_width="320dp"
-            android:layout_height="266dp"
-            android:layout_gravity="center_horizontal|bottom"
-            android:layout_margin="40dp" />
     </FrameLayout>
 
 </LinearLayout>
