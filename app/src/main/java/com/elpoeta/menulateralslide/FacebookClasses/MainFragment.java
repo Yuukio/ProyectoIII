@@ -6,9 +6,12 @@ import com.elpoeta.menulateralslide.MyActivity;
 import com.elpoeta.menulateralslide.R;
 import java.util.Arrays;
 
+import com.facebook.Request;
+import com.facebook.Response;
 import com.facebook.SessionState;
 import com.facebook.Session;
 import com.facebook.UiLifecycleHelper;
+import com.facebook.model.GraphUser;
 import com.facebook.widget.LoginButton;
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,6 +27,14 @@ public class MainFragment extends Fragment{
     private static final String TAG = "MainFragment";
 
     private UiLifecycleHelper uiHelper;
+    private static final int REAUTH_ACTIVITY_CODE = 100;
+    private String user_email;
+    private String user_name;
+    private String user_lastname;
+    private String user_birthdate;
+    private String user_id;
+    private String user_gender;
+
 
 
     @Override
@@ -44,6 +55,10 @@ public class MainFragment extends Fragment{
     private void onSessionStateChange(Session session, SessionState state, Exception exception) {
         if (state.isOpened()) {
             Log.i(TAG, "Logged in...");
+            if (session != null && session.isOpened()) {
+                // Get the user's data.
+                makeMeRequest(session);
+            }
             Intent intent = new Intent(getActivity(), MyActivity.class);
             startActivity(intent);
         } else if (state.isClosed()) {
@@ -60,11 +75,14 @@ public class MainFragment extends Fragment{
 
 
         LoginButton authButton = (LoginButton) view.findViewById(R.id.authButton);
-        authButton.setReadPermissions(Arrays.asList("public_profile"));
+        authButton.setReadPermissions(Arrays.asList("public_profile", "email", "user_birthday"));
 
         authButton.setFragment(this);
-
-        authButton.setReadPermissions(Arrays.asList("user_likes", "user_status"));
+        Session session = Session.getActiveSession();
+        if (session != null && session.isOpened()) {
+            // Get the user's data
+            makeMeRequest(session);
+        }
 
         return view;
     }
@@ -89,7 +107,9 @@ public class MainFragment extends Fragment{
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        uiHelper.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REAUTH_ACTIVITY_CODE) {
+            uiHelper.onActivityResult(requestCode, resultCode, data);
+        }
     }
 
     @Override
@@ -109,29 +129,58 @@ public class MainFragment extends Fragment{
         super.onSaveInstanceState(outState);
         uiHelper.onSaveInstanceState(outState);
     }
-
-	/*public void InfoProfile(){
-
-		new Request(
-			    Session.getActiveSession(),
-			    "/me",
-			    null,
-			    HttpMethod.GET,
-			    new Request.Callback() {
-			        public void onCompleted(Response response) {
-
-			        	String name = response.getGraphObject().getProperty("first_name").toString();
-			        	String last = response.getGraphObject().getProperty("last_name").toString();
-			        	TextView test = (TextView)getActivity().findViewById(R.id.textView1);
-			        	String display = new StringBuilder(name).append(last).toString();
-			        }
-			    }
-			).executeAsync();
-
-
-	}*/
-
-
+    //getters de los atributos del usuario
+    public String getUser_email() {
+        return user_email;
+    }
+    public String getUser_name() {
+        return user_name;
+    }
+    public String getUser_lastname() {
+        return user_lastname;
+    }
+    public String getUser_birthdate() {
+        return user_birthdate;
+    }
+    public String getUser_id() {
+        return user_id;
+    }
+    public String getUser_gender() {
+        return user_gender;
+    }
+    //
+    private void makeMeRequest(final Session session) {
+        // Make an API call to get user data and define a
+        // new callback to handle the response.
+        Request request = Request.newMeRequest(session,
+                new Request.GraphUserCallback() {
+                    @Override
+                    public void onCompleted(GraphUser user, Response response) {
+                        // If the response is successful
+                        if (session == Session.getActiveSession()) {
+                            if (user != null) {
+                                user_id= user.getId();
+                                user_name= user.getFirstName();
+                                user_lastname= user.getLastName();
+                                user_birthdate= user.getBirthday();
+                                user_gender = user.asMap().get("gender").toString();
+                                user_email = user.asMap().get("email").toString();
+                                String infoUsuario = "ID: "+getUser_id()
+                                        +"\nNombre: "+getUser_name()
+                                        +"\nApellido: "+getUser_lastname()
+                                        +"\nFecha de nacimiento: "+getUser_birthdate()
+                                        +"\nGenero: "+getUser_gender()
+                                        +"\nCorreo: "+getUser_email();
+                                System.out.println(infoUsuario);
+                            }
+                        }
+                        if (response.getError() != null) {
+                            // Handle errors, will do so later.
+                        }
+                    }
+                });
+        request.executeAsync();
+    }
 }
 
 
