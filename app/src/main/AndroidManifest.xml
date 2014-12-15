@@ -27,10 +27,6 @@
             android:name="com.elpoeta.menulateralslide.MyActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
 
         </activity>
@@ -72,7 +68,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MyActivity" />
         </activity>
-        <activity android:name="com.facebook.LoginActivity"/>
+        <activity android:name="com.facebook.LoginActivity"
+
+            />
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -83,12 +81,16 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MyActivity" />
+
         </activity>
 
         <activity
             android:name="com.elpoeta.menulateralslide.FacebookClasses.LoginActivity"
             android:label="@string/app_name" >
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>

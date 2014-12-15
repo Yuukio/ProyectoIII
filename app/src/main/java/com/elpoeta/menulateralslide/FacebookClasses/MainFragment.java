@@ -27,14 +27,13 @@ public class MainFragment extends Fragment{
     private static final String TAG = "MainFragment";
 
     private UiLifecycleHelper uiHelper;
-    private static final int REAUTH_ACTIVITY_CODE = 100;
+  //  private static final int REAUTH_ACTIVITY_CODE = 100;
     private String user_email;
     private String user_name;
     private String user_lastname;
     private String user_birthdate;
     private String user_id;
     private String user_gender;
-
 
 
     @Override
@@ -53,12 +52,9 @@ public class MainFragment extends Fragment{
     };
 
     private void onSessionStateChange(Session session, SessionState state, Exception exception) {
-        if (state.isOpened()) {
+        if (session != null && session.isOpened()) {
             Log.i(TAG, "Logged in...");
-            if (session != null && session.isOpened()) {
-                // Get the user's data.
-                makeMeRequest(session);
-            }
+            makeMeRequest(session);
             Intent intent = new Intent(getActivity(), MyActivity.class);
             startActivity(intent);
         } else if (state.isClosed()) {
@@ -75,14 +71,9 @@ public class MainFragment extends Fragment{
 
 
         LoginButton authButton = (LoginButton) view.findViewById(R.id.authButton);
-        authButton.setReadPermissions(Arrays.asList("public_profile", "email", "user_birthday"));
 
         authButton.setFragment(this);
-        Session session = Session.getActiveSession();
-        if (session != null && session.isOpened()) {
-            // Get the user's data
-            makeMeRequest(session);
-        }
+        authButton.setReadPermissions(Arrays.asList("user_likes", "user_status","public_profile","user_birthday","email"));
 
         return view;
     }
@@ -107,9 +98,7 @@ public class MainFragment extends Fragment{
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REAUTH_ACTIVITY_CODE) {
             uiHelper.onActivityResult(requestCode, resultCode, data);
-        }
     }
 
     @Override
@@ -148,7 +137,7 @@ public class MainFragment extends Fragment{
     public String getUser_gender() {
         return user_gender;
     }
-    //
+
     private void makeMeRequest(final Session session) {
         // Make an API call to get user data and define a
         // new callback to handle the response.
